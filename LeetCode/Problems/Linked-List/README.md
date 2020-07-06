@@ -594,7 +594,8 @@ The serialization of each level is as follows:
 [11,12,null]
 ```
 
-To serialize all levels together we will add nulls in each level to signify no node connects to the upper node of the previous level. The serialization becomes:
+To serialize all levels together we will add nulls in each level to signify no node connects to the upper 
+node of the previous level. The serialization becomes:
 ```
 [1,2,3,4,5,6,null]
 [null,null,7,8,9,10,null]
@@ -641,7 +642,8 @@ Input:
 root = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], k = 3
 Output: [[1, 2, 3, 4], [5, 6, 7], [8, 9, 10]]
 Explanation:
-The input has been split into consecutive parts with size difference at most 1, and earlier parts are a larger size than the later parts.
+The input has been split into consecutive parts with size difference at most 1, and earlier parts are a larger size 
+than the later parts.
 ```
 
 **Note:**
@@ -649,3 +651,24 @@ The input has been split into consecutive parts with size difference at most 1, 
 - The length of ```root``` will be in the range ```[0, 1000]```.
 - Each value of a node in the input will be an integer in the range ```[0, 999]```.
 - ```k``` will be an integer in the range ```[1, 50]```.
+
+**Solution:**
+
+```cpp
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */
+class Solution {
+public:
+    vector<ListNode*> splitListToParts(ListNode* root, int k) {
+        
+    }
+};
+```
