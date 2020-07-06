@@ -186,3 +186,22 @@ Explanation: The two lists do not intersect, so return null.
 - You may assume there are no cycles anywhere in the entire linked structure.
 - Each value on each linked list is in the range [1, 10^9].
 - Your code should preferably run in O(n) time and use only O(1) memory.
+
+## 234. Palindrome Linked List
+
+Given a singly linked list, determine if it is a palindrome.
+
+**Example 1:**
+```
+Input: 1->2
+Output: false
+```
+
+**Example 2:**
+```
+Input: 1->2->2->1
+Output: true
+```
+
+**Follow up:**
+Could you do it in O(n) time and O(1) space?
