@@ -36,7 +36,8 @@ public:
 
 ## 21. Merge Two Sorted Lists
 
-Merge two sorted linked lists and return it as a new sorted list. The new list should be made by splicing together the nodes of the first two lists.
+Merge two sorted linked lists and return it as a new sorted list. The new list should be made by 
+splicing together the nodes of the first two lists.
 
 **Example:**
 
@@ -82,7 +83,9 @@ Output: 1->2->3
 ## 141. Linked List Cycle
 Given a linked list, determine if it has a cycle in it.
 
-To represent a cycle in the given linked list, we use an integer ```pos``` which represents the position (0-indexed) in the linked list where tail connects to. If ```pos``` is ```-1```, then there is no cycle in the linked list.
+To represent a cycle in the given linked list, we use an integer ```pos``` which represents the position 
+(0-indexed) in the linked list where tail connects to. If ```pos``` is ```-1```, then there is no cycle 
+in the linked list.
 
 **Example 1:**
 ```
@@ -148,7 +151,9 @@ begin to intersect at node c1.
 ```
 Input: intersectVal = 8, listA = [4,1,8,4,5], listB = [5,6,1,8,4,5], skipA = 2, skipB = 3
 Output: Reference of the node with value = 8
-Input Explanation: The intersected node's value is 8 (note that this must not be 0 if the two lists intersect). From the head of A, it reads as [4,1,8,4,5]. From the head of B, it reads as [5,6,1,8,4,5]. There are 2 nodes before the intersected node in A; There are 3 nodes before the intersected node in B.
+Input Explanation: The intersected node's value is 8 (note that this must not be 0 if the two lists 
+intersect). From the head of A, it reads as [4,1,8,4,5]. From the head of B, it reads as [5,6,1,8,4,5].
+There are 2 nodes before the intersected node in A; There are 3 nodes before the intersected node in B.
 ```
 
 **Example 2:**
@@ -158,7 +163,9 @@ Input Explanation: The intersected node's value is 8 (note that this must not be
 ```
 Input: intersectVal = 2, listA = [1,9,1,2,4], listB = [3,2,4], skipA = 3, skipB = 1
 Output: Reference of the node with value = 2
-Input Explanation: The intersected node's value is 2 (note that this must not be 0 if the two lists intersect). From the head of A, it reads as [1,9,1,2,4]. From the head of B, it reads as [3,2,4]. There are 3 nodes before the intersected node in A; There are 1 node before the intersected node in B.
+Input Explanation: The intersected node's value is 2 (note that this must not be 0 if the two lists 
+intersect). From the head of A, it reads as [1,9,1,2,4]. From the head of B, it reads as [3,2,4]. 
+There are 3 nodes before the intersected node in A; There are 1 node before the intersected node in B.
 ```
 
 **Example 3:**
@@ -168,7 +175,8 @@ Input Explanation: The intersected node's value is 2 (note that this must not be
 ```
 Input: intersectVal = 0, listA = [2,6,4], listB = [1,5], skipA = 3, skipB = 2
 Output: null
-Input Explanation: From the head of A, it reads as [2,6,4]. From the head of B, it reads as [1,5]. Since the two lists do not intersect, intersectVal must be 0, while skipA and skipB can be arbitrary values.
+Input Explanation: From the head of A, it reads as [2,6,4]. From the head of B, it reads as [1,5]. 
+Since the two lists do not intersect, intersectVal must be 0, while skipA and skipB can be arbitrary values.
 Explanation: The two lists do not intersect, so return null.
 ```
 
