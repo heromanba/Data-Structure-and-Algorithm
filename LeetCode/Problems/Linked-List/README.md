@@ -631,9 +631,10 @@ root = [1, 2, 3], k = 5
 Output: [[1],[2],[3],[],[]]
 Explanation:
 The input and each element of the output are ListNodes, not arrays.
-For example, the input root has root.val = 1, root.next.val = 2, \root.next.next.val = 3, and root.next.next.next = null.
-The first element output[0] has output[0].val = 1, output[0].next = null.
-The last element output[4] is null, but it's string representation as a ListNode is [].
+For example, the input root has root.val = 1, root.next.val = 2, \root.next.next.val = 3, 
+and root.next.next.next = null. The first element output[0] has output[0].val = 1, 
+output[0].next = null. The last element output[4] is null, but it's string representation 
+as a ListNode is [].
 ```
 
 **Example 2:**
@@ -642,8 +643,8 @@ Input:
 root = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], k = 3
 Output: [[1, 2, 3, 4], [5, 6, 7], [8, 9, 10]]
 Explanation:
-The input has been split into consecutive parts with size difference at most 1, and earlier parts are a larger size 
-than the later parts.
+The input has been split into consecutive parts with size difference at most 1, and earlier 
+parts are a larger size than the later parts.
 ```
 
 **Note:**
@@ -673,7 +674,7 @@ public:
 };
 ```
 
-## Swap Nodes in Pairs
+## 24.Swap Nodes in Pairs
 
 Given a linked list, swap every two adjacent nodes and return its head.
 
@@ -701,4 +702,130 @@ public:
         
     }
 };
+```
+
+## 109. Convert Sorted List to Binary Search Tree
+
+Given a singly linked list where elements are sorted in ascending order, convert it to a height balanced BST.
+
+For this problem, a height-balanced binary tree is defined as a binary tree in which the depth of the two subtrees of every node never differ by more than 1.
+
+**Example:**
+```
+Given the sorted linked list: [-10,-3,0,5,9],
+
+One possible answer is: [0,-3,9,-10,null,5], which represents the following height balanced BST:
+
+      0
+     / \
+   -3   9
+   /   /
+ -10  5
+```
+
+**Solution:**
+
+```cpp
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
+public:
+    TreeNode* sortedListToBST(ListNode* head) {
+        
+    }
+};
+```
+
+## 379. Design Phone Directory
+Design a Phone Directory which supports the following operations:
+
+- ```get```: Provide a number which is not assigned to anyone.
+- ```check```: Check if a number is available or not.
+- ```release```: Recycle or release a number.
+ 
+ **Example:**
+ ```
+ // Init a phone directory containing a total of 3 numbers: 0, 1, and 2.
+PhoneDirectory directory = new PhoneDirectory(3);
+
+// It can return any available phone number. Here we assume it returns 0.
+directory.get();
+
+// Assume it returns 1.
+directory.get();
+
+// The number 2 is available, so return true.
+directory.check(2);
+
+// It returns 2, the only number that is left.
+directory.get();
+
+// The number 2 is no longer available, so return false.
+directory.check(2);
+
+// Release number 2 back to the pool.
+directory.release(2);
+
+// Number 2 is available again, return true.
+directory.check(2);
+```
+
+**Constraints:**
+- ```1 <= maxNumbers <= 10^4```
+- ```0 <= number < maxNumbers```
+- The total number of call of the methods is between ```[0 - 20000]```
+
+**Solution:**
+```cpp
+class PhoneDirectory {
+public:
+    /** Initialize your data structure here
+        @param maxNumbers - The maximum numbers that can be stored in the phone directory. */
+    PhoneDirectory(int maxNumbers) {
+        
+    }
+    
+    /** Provide a number which is not assigned to anyone.
+        @return - Return an available number. Return -1 if none is available. */
+    int get() {
+        
+    }
+    
+    /** Check if a number is available or not. */
+    bool check(int number) {
+        
+    }
+    
+    /** Recycle or release a number. */
+    void release(int number) {
+        
+    }
+};
+
+/**
+ * Your PhoneDirectory object will be instantiated and called as such:
+ * PhoneDirectory* obj = new PhoneDirectory(maxNumbers);
+ * int param_1 = obj->get();
+ * bool param_2 = obj->check(number);
+ * obj->release(number);
+ */
 ```
