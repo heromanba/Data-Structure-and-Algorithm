@@ -1472,6 +1472,8 @@ Input: root = [4,2,5,1,3], target = 3.714286
   2   5
  / \
 1   3
+
+Output: 4
 ```
 
 **Solution:**
@@ -1494,4 +1496,59 @@ public:
     }
 };
 ```
-Output: 4
+
+## 101. Symmetric Tree
+
+Given a binary tree, check whether it is a mirror of itself (ie, symmetric around its center).
+
+For example, this binary tree ```[1,2,2,3,4,4,3]``` is symmetric:
+```
+    1
+   / \
+  2   2
+ / \ / \
+3  4 4  3
+```
+
+But the following ```[1,2,2,null,3,null,3]``` is not:
+```
+    1
+   / \
+  2   2
+   \   \
+   3    3
+```
+
+**Follow up:** Solve it both recursively and iteratively.
+
+**Solution:**
+```cpp
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
+public:
+    bool isTwoTreeMirror(TreeNode* left, TreeNode* right) {
+        if ((left == NULL) && (right == NULL))
+            return true;
+        if ((left == NULL) || (right == NULL))
+            return false;
+        return isTwoTreeMirror(left->left, right->right) && 
+            isTwoTreeMirror(left->right, right->left) &&
+            (left->val == right->val);
+    }
+    
+    bool isSymmetric(TreeNode* root) {
+        
+        return isTwoTreeMirror(root, root);
+    }
+};
+```
