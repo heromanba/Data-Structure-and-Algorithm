@@ -998,3 +998,24 @@ The minimum absolute difference is 1, which is the difference between 2 and 1 (o
 
 - There are at least two nodes in this BST.
 - This question is the same as 783: https://leetcode.com/problems/minimum-distance-between-bst-nodes/
+
+**Solution:**
+```cpp
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
+public:
+    int getMinimumDifference(TreeNode* root) {
+        
+    }
+};
+```
