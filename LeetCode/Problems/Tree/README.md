@@ -348,7 +348,8 @@ public:
 ```
 
 ## 897. Increasing Order Search Tree
-Given a binary search tree, rearrange the tree in **in-order** so that the leftmost node in the tree is now the root of the tree, and every node has no left child and only 1 right child.
+Given a binary search tree, rearrange the tree in **in-order** so that the leftmost node in the tree is now the root of the tree, 
+and every node has no left child and only 1 right child.
 
 ```
 Example 1:
@@ -749,7 +750,8 @@ Input:
    15   7
 Output: [3, 14.5, 11]
 Explanation:
-The average value of nodes on level 0 is 3,  on level 1 is 14.5, and on level 2 is 11. Hence return [3, 14.5, 11].
+The average value of nodes on level 0 is 3,  on level 1 is 14.5, and on level 2 is 11. 
+Hence return [3, 14.5, 11].
 ```
 
 **Note:**
@@ -945,7 +947,8 @@ Input: Binary tree: [1,2,3,null,4]
 Output: "1(2()(4))(3)"
 
 Explanation: Almost the same as the first example, 
-except we can't omit the first parenthesis pair to break the one-to-one mapping relationship between the input and the output.
+except we can't omit the first parenthesis pair to break the one-to-one mapping 
+relationship between the input and the output.
 ```
 
 **Solution:**
