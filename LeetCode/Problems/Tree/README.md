@@ -1454,3 +1454,44 @@ public:
     }
 };
 ```
+
+## 270. Closest Binary Search Tree Value
+Given a non-empty binary search tree and a target value, find the value in the BST that is closest to the target.
+
+**Note:**
+
+- Given target value is a floating point.
+- You are guaranteed to have only one unique value in the BST that is closest to the target.
+
+**Example:**
+```
+Input: root = [4,2,5,1,3], target = 3.714286
+
+    4
+   / \
+  2   5
+ / \
+1   3
+```
+
+**Solution:**
+```cpp
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
+public:
+    int closestValue(TreeNode* root, double target) {
+        
+    }
+};
+```
+Output: 4
