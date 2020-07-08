@@ -2044,7 +2044,8 @@ Input: root = [4,2,5,1,3]
 
 Output: [1,2,3,4,5]
 
-Explanation: The figure below shows the transformed BST. The solid line indicates the successor relationship, while the dashed line means the predecessor relationship.
+Explanation: The figure below shows the transformed BST. The solid line indicates 
+the successor relationship, while the dashed line means the predecessor relationship.
 ```
 
 Example 2:
