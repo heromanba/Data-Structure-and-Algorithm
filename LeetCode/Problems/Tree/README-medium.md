@@ -1552,3 +1552,60 @@ public:
     }
 };
 ```
+
+## 94. Binary Tree Inorder Traversal
+
+Given a binary tree, return the inorder traversal of its nodes' values.
+
+Example:
+
+```
+Input: [1,null,2,3]
+   1
+    \
+     2
+    /
+   3
+
+Output: [1,3,2]
+``
+
+Follow up: Recursive solution is trivial, could you do it iteratively?
+
+Solution:
+```cpp
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
+public:
+    vector<int> inorderTraversal(TreeNode* root) {
+        vector<int> vec_root;
+        if (root == NULL)
+            return vec_root;
+        
+        vector<int> vec_left;
+        vector<int> vec_right;
+        
+        if (root->left != NULL)
+            vec_left = inorderTraversal(root->left);
+        vec_root.insert(vec_root.end(), vec_left.begin(), vec_left.end());
+        
+        vec_root.push_back(root->val);
+        
+        if (root->right != NULL)
+            vec_right = inorderTraversal(root->right);
+        vec_root.insert(vec_root.end(), vec_right.begin(), vec_right.end());
+        
+        return vec_root;
+    }
+};
+```
