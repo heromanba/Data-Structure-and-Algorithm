@@ -131,7 +131,8 @@ Example 1:
 ```
 Input: tree = [7,4,3,null,null,6,19], target = 3
 Output: 3
-Explanation: In all examples the original and cloned trees are shown. The target node is a green node from the original tree. The answer is the yellow node from the cloned tree.
+Explanation: In all examples the original and cloned trees are shown. The target node is a green node from the original tree. 
+The answer is the yellow node from the cloned tree.
 ```
 
 Example 2:
@@ -192,6 +193,50 @@ Solution:
 class Solution {
 public:
     TreeNode* getTargetCopy(TreeNode* original, TreeNode* cloned, TreeNode* target) {
+        
+    }
+};
+```
+
+## 1315. Sum of Nodes with Even-Valued Grandparent
+
+Given a binary tree, return the sum of values of nodes with even-valued grandparent.  (A grandparent of a node is the parent of its parent, if it exists.)
+
+If there are no nodes with an even-valued grandparent, return 0.
+
+Example 1:
+
+![](https://assets.leetcode.com/uploads/2019/07/24/1473_ex1.png)
+
+```
+Input: root = [6,7,8,2,7,1,3,9,null,1,4,null,null,null,5]
+Output: 18
+Explanation: The red nodes are the nodes with even-value grandparent while the 
+blue nodes are the even-value grandparents.
+```
+
+Constraints:
+
+- The number of nodes in the tree is between 1 and 10^4.
+- The value of nodes is between 1 and 100.
+
+Solution:
+
+```cpp
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
+public:
+    int sumEvenGrandparent(TreeNode* root) {
         
     }
 };
