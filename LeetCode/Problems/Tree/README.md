@@ -1,5 +1,5 @@
 
-# Tree
+# Tree (Easy)
 
 ## 1469. Find All The Lonely Nodes
 In a binary tree, a **lonely** node is a node that is the only child of its parent node. The root of the tree is not lonely because it does not have a parent node.
