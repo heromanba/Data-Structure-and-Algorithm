@@ -1176,7 +1176,7 @@ Output: [4]
 ```
 
 Example 3:
-``
+```
 Input: root = [1,2,3,4,5]
 Output: [2,4,5]
 ``` 
