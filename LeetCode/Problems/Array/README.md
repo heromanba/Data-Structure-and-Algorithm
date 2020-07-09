@@ -974,3 +974,1015 @@ public:
     }
 };
 ```
+
+## 448. Find All Numbers Disappeared in an Array
+
+Given an array of integers where 1 ≤ a[i] ≤ n (n = size of array), some elements appear twice and others appear once.
+
+Find all the elements of [1, n] inclusive that do not appear in this array.
+
+Could you do it without extra space and in O(n) runtime? You may assume the returned list does not count as extra space.
+
+Example:
+```
+Input:
+[4,3,2,7,8,2,3,1]
+
+Output:
+[5,6]
+```
+
+Solution:
+```cpp
+class Solution {
+public:
+    vector<int> findDisappearedNumbers(vector<int>& nums) {
+        
+    }
+};
+```
+
+## 167. Two Sum II - Input array is sorted
+
+Given an array of integers that is already sorted in ascending order, find two numbers such that they add up to a specific target number.
+
+The function twoSum should return indices of the two numbers such that they add up to the target, where index1 must be less than index2.
+
+Note:
+
+- Your returned answers (both index1 and index2) are not zero-based.
+- You may assume that each input would have exactly one solution and you may not use the same element twice.
+
+Example:
+```
+Input: numbers = [2,7,11,15], target = 9
+Output: [1,2]
+Explanation: The sum of 2 and 7 is 9. Therefore index1 = 1, index2 = 2.
+```
+
+Solution:
+```cpp
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& numbers, int target) {
+        
+    }
+};
+```
+
+## 18. 4Sum
+
+Given an array nums of n integers and an integer target, are there elements a, b, c, and d in nums such that a + b + c + d = target? Find all unique quadruplets in the array which gives the sum of target.
+
+Note:
+
+The solution set must not contain duplicate quadruplets.
+
+Example:
+```
+Given array nums = [1, 0, -1, 0, -2, 2], and target = 0.
+
+A solution set is:
+[
+  [-1,  0, 0, 1],
+  [-2, -1, 1, 2],
+  [-2,  0, 0, 2]
+]
+```
+
+Solution:
+```cpp
+class Solution {
+public:
+    vector<vector<int>> fourSum(vector<int>& nums, int target) {
+        
+    }
+};
+```
+
+## 79. Word Search
+ 
+Given a 2D board and a word, find if the word exists in the grid.
+
+The word can be constructed from letters of sequentially adjacent cell, where "adjacent" cells are those horizontally or vertically neighboring. The same letter cell may not be used more than once.
+
+Example:
+```
+board =
+[
+  ['A','B','C','E'],
+  ['S','F','C','S'],
+  ['A','D','E','E']
+]
+
+Given word = "ABCCED", return true.
+Given word = "SEE", return true.
+Given word = "ABCB", return false.
+```
+
+Constraints:
+
+- board and word consists only of lowercase and uppercase English letters.
+- 1 <= board.length <= 200
+- 1 <= board[i].length <= 200
+- 1 <= word.length <= 10^3
+
+Solution:
+```cpp
+class Solution {
+public:
+    bool exist(vector<vector<char>>& board, string word) {
+        
+    }
+};
+```
+
+## 219. Contains Duplicate II
+ 
+Given an array of integers and an integer k, find out whether there are two distinct indices i and j in the array such that nums[i] = nums[j] and the absolute difference between i and j is at most k.
+
+Example 1:
+```
+Input: nums = [1,2,3,1], k = 3
+Output: true
+```
+Example 2:
+```
+Input: nums = [1,0,1,1], k = 1
+Output: true
+```
+Example 3:
+```
+Input: nums = [1,2,3,1,2,3], k = 2
+Output: false
+```
+
+Solution:
+```cpp
+class Solution {
+public:
+    bool containsNearbyDuplicate(vector<int>& nums, int k) {
+        
+    }
+};
+```
+
+## 27. Remove Element
+
+Given an array nums and a value val, remove all instances of that value in-place and return the new length.
+
+Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
+
+The order of elements can be changed. It doesn't matter what you leave beyond the new length.
+
+Example 1:
+```
+Given nums = [3,2,2,3], val = 3,
+
+Your function should return length = 2, with the first two elements of nums being 2.
+
+It doesn't matter what you leave beyond the returned length.
+```
+
+Example 2:
+```
+Given nums = [0,1,2,2,3,0,4,2], val = 2,
+
+Your function should return length = 5, with the first five elements of nums containing 0, 1, 3, 0, and 4.
+
+Note that the order of those five elements can be arbitrary.
+
+It doesn't matter what values are set beyond the returned length.
+```
+Clarification:
+
+Confused why the returned value is an integer but your answer is an array?
+
+Note that the input array is passed in by reference, which means modification to the input array will be known to the caller as well.
+
+Internally you can think of this:
+```
+// nums is passed in by reference. (i.e., without making a copy)
+int len = removeElement(nums, val);
+
+// any modification to nums in your function would be known by the caller.
+// using the length returned by your function, it prints the first len elements.
+for (int i = 0; i < len; i++) {
+    print(nums[i]);
+}
+```
+
+Solution:
+```cpp
+class Solution {
+public:
+    int removeElement(vector<int>& nums, int val) {
+        
+    }
+};
+```
+
+## 78. Subsets
+
+Given a set of distinct integers, nums, return all possible subsets (the power set).
+
+Note: The solution set must not contain duplicate subsets.
+
+Example:
+```
+Input: nums = [1,2,3]
+Output:
+[
+  [3],
+  [1],
+  [2],
+  [1,2,3],
+  [1,3],
+  [2,3],
+  [1,2],
+  []
+]
+```
+
+Solution:
+```cpp
+class Solution {
+public:
+    vector<vector<int>> subsets(vector<int>& nums) {
+        
+    }
+};
+```
+
+## 229. Majority Element II
+
+Given an integer array of size n, find all elements that appear more than ⌊ n/3 ⌋ times.
+
+Note: The algorithm should run in linear time and in O(1) space.
+
+Example 1:
+```
+Input: [3,2,3]
+Output: [3]
+```
+Example 2:
+```
+Input: [1,1,1,3,3,2,2,2]
+Output: [1,2]
+```
+Solution:
+```cpp
+class Solution {
+public:
+    vector<int> majorityElement(vector<int>& nums) {
+        
+    }
+};
+```
+
+## 217. Contains Duplicate
+
+Given an array of integers, find if the array contains any duplicates.
+
+Your function should return true if any value appears at least twice in the array, and it should return false if every element is distinct.
+
+Example 1:
+```
+Input: [1,2,3,1]
+Output: true
+```
+Example 2:
+```
+Input: [1,2,3,4]
+Output: false
+```
+Example 3:
+```
+Input: [1,1,1,3,3,4,3,2,4,2]
+Output: true
+```
+
+Solution:
+```cpp
+class Solution {
+public:
+    bool containsDuplicate(vector<int>& nums) {
+        
+    }
+};
+```
+
+## 287. Find the Duplicate Number
+
+Given an array nums containing n + 1 integers where each integer is between 1 and n (inclusive), prove that at least one duplicate number must exist. Assume that there is only one duplicate number, find the duplicate one.
+
+Example 1:
+```
+Input: [1,3,4,2,2]
+Output: 2
+```
+Example 2:
+```
+Input: [3,1,3,4,2]
+Output: 3
+```
+Note:
+
+- You must not modify the array (assume the array is read only).
+- You must use only constant, O(1) extra space.
+- Your runtime complexity should be less than O(n2).
+- There is only one duplicate number in the array, but it could be repeated more than once.
+
+Solution:
+```cpp
+class Solution {
+public:
+    int findDuplicate(vector<int>& nums) {
+        
+    }
+};
+```
+
+## 120. Triangle
+
+Given a triangle, find the minimum path sum from top to bottom. Each step you may move to adjacent numbers on the row below.
+
+For example, given the following triangle
+```
+[
+     [2],
+    [3,4],
+   [6,5,7],
+  [4,1,8,3]
+]
+```
+The minimum path sum from top to bottom is 11 (i.e., 2 + 3 + 5 + 1 = 11).
+
+Note:
+
+Bonus point if you are able to do this using only O(n) extra space, where n is the total number of rows in the triangle.
+
+Solution:
+```cpp
+class Solution {
+public:
+    int minimumTotal(vector<vector<int>>& triangle) {
+        
+    }
+};
+```
+
+## 59. Spiral Matrix II
+
+Given a positive integer n, generate a square matrix filled with elements from 1 to n2 in spiral order.
+
+Example:
+```
+Input: 3
+Output:
+[
+ [ 1, 2, 3 ],
+ [ 8, 9, 4 ],
+ [ 7, 6, 5 ]
+]
+```
+
+Solution:
+```cpp
+class Solution {
+public:
+    vector<vector<int>> generateMatrix(int n) {
+        
+    }
+};
+```
+
+## 64. Minimum Path Sum
+
+Given a m x n grid filled with non-negative numbers, find a path from top left to bottom right which minimizes the sum of all numbers along its path.
+
+Note: You can only move either down or right at any point in time.
+
+Example:
+```
+Input:
+[
+  [1,3,1],
+  [1,5,1],
+  [4,2,1]
+]
+Output: 7
+Explanation: Because the path 1→3→1→1→1 minimizes the sum.
+```
+
+Solution:
+```cpp
+class Solution {
+public:
+    int minPathSum(vector<vector<int>>& grid) {
+        
+    }
+};
+```
+
+## 228. Summary Ranges
+
+Given a sorted integer array without duplicates, return the summary of its ranges.
+
+Example 1:
+```
+Input:  [0,1,2,4,5,7]
+Output: ["0->2","4->5","7"]
+Explanation: 0,1,2 form a continuous range; 4,5 form a continuous range.
+```
+Example 2:
+```
+Input:  [0,2,3,4,6,8,9]
+Output: ["0","2->4","6","8->9"]
+Explanation: 2,3,4 form a continuous range; 8,9 form a continuous range.
+```
+
+Solution:
+```cpp
+class Solution {
+public:
+    vector<string> summaryRanges(vector<int>& nums) {
+        
+    }
+};
+```
+
+## 105. Construct Binary Tree from Preorder and Inorder Traversal
+ 
+Given preorder and inorder traversal of a tree, construct the binary tree.
+
+Note:
+You may assume that duplicates do not exist in the tree.
+
+For example, given
+```
+preorder = [3,9,20,15,7]
+inorder = [9,3,15,20,7]
+```
+Return the following binary tree:
+```
+    3
+   / \
+  9  20
+    /  \
+   15   7
+```
+
+Solution:
+```cpp
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
+public:
+    TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder) {
+        
+    }
+};
+```
+
+## 45. Jump Game II
+
+Given an array of non-negative integers, you are initially positioned at the first index of the array.
+
+Each element in the array represents your maximum jump length at that position.
+
+Your goal is to reach the last index in the minimum number of jumps.
+
+Example:
+```
+Input: [2,3,1,1,4]
+Output: 2
+Explanation: The minimum number of jumps to reach the last index is 2.
+    Jump 1 step from index 0 to 1, then 3 steps to the last index.
+```
+
+Note:
+
+You can assume that you can always reach the last index.
+
+Solution:
+```cpp
+class Solution {
+public:
+    int jump(vector<int>& nums) {
+        
+    }
+};
+```
+
+## 153. Find Minimum in Rotated Sorted Array
+
+Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
+
+(i.e.,  [0,1,2,4,5,6,7] might become  [4,5,6,7,0,1,2]).
+
+Find the minimum element.
+
+You may assume no duplicate exists in the array.
+
+Example 1:
+```
+Input: [3,4,5,1,2] 
+Output: 1
+```
+
+Example 2:
+```
+Input: [4,5,6,7,0,1,2]
+Output: 0
+```
+
+Solution:
+```cpp
+class Solution {
+public:
+    int findMin(vector<int>& nums) {
+        
+    }
+};
+```
+
+## 950. Reveal Cards In Increasing Order
+
+In a deck of cards, every card has a unique integer.  You can order the deck in any order you want.
+
+Initially, all the cards start face down (unrevealed) in one deck.
+
+Now, you do the following steps repeatedly, until all cards are revealed:
+
+- Take the top card of the deck, reveal it, and take it out of the deck.
+- If there are still cards in the deck, put the next top card of the deck at the bottom of the deck.
+- If there are still unrevealed cards, go back to step 1.  Otherwise, stop.
+
+Return an ordering of the deck that would reveal the cards in increasing order.
+
+The first entry in the answer is considered to be the top of the deck.
+
+Example 1:
+```
+Input: [17,13,11,2,3,5,7]
+Output: [2,13,3,11,5,17,7]
+Explanation: 
+We get the deck in the order [17,13,11,2,3,5,7] (this order doesn't matter), and reorder it.
+After reordering, the deck starts as [2,13,3,11,5,17,7], where 2 is the top of the deck.
+We reveal 2, and move 13 to the bottom.  The deck is now [3,11,5,17,7,13].
+We reveal 3, and move 11 to the bottom.  The deck is now [5,17,7,13,11].
+We reveal 5, and move 17 to the bottom.  The deck is now [7,13,11,17].
+We reveal 7, and move 13 to the bottom.  The deck is now [11,17,13].
+We reveal 11, and move 17 to the bottom.  The deck is now [13,17].
+We reveal 13, and move 17 to the bottom.  The deck is now [17].
+We reveal 17.
+Since all the cards revealed are in increasing order, the answer is correct.
+```
+
+Note:
+
+- 1 <= A.length <= 1000
+- 1 <= A[i] <= 10^6
+- A[i] != A[j] for all i != j
+
+Solution:
+```cpp
+class Solution {
+public:
+    vector<int> deckRevealedIncreasing(vector<int>& deck) {
+        
+    }
+};
+```
+
+## 560. Subarray Sum Equals K
+
+Given an array of integers and an integer k, you need to find the total number of continuous subarrays whose sum equals to k.
+
+Example 1:
+```
+Input:nums = [1,1,1], k = 2
+Output: 2
+```
+
+Constraints:
+
+- The length of the array is in range [1, 20,000].
+- The range of numbers in the array is [-1000, 1000] and the range of the integer k is [-1e7, 1e7].
+
+Solution:
+```cpp
+class Solution {
+public:
+    int subarraySum(vector<int>& nums, int k) {
+        
+    }
+};
+```
+
+## 695. Max Area of Island
+
+Given a non-empty 2D array grid of 0's and 1's, an island is a group of 1's (representing land) connected 4-directionally (horizontal or vertical.) You may assume all four edges of the grid are surrounded by water.
+
+Find the maximum area of an island in the given 2D array. (If there is no island, the maximum area is 0.)
+
+Example 1:
+```
+[[0,0,1,0,0,0,0,1,0,0,0,0,0],
+ [0,0,0,0,0,0,0,1,1,1,0,0,0],
+ [0,1,1,0,1,0,0,0,0,0,0,0,0],
+ [0,1,0,0,1,1,0,0,1,0,1,0,0],
+ [0,1,0,0,1,1,0,0,1,1,1,0,0],
+ [0,0,0,0,0,0,0,0,0,0,1,0,0],
+ [0,0,0,0,0,0,0,1,1,1,0,0,0],
+ [0,0,0,0,0,0,0,1,1,0,0,0,0]]
+```
+
+Given the above grid, return 6. Note the answer is not 11, because the island must be connected 4-directionally.
+
+Example 2:
+```
+[[0,0,0,0,0,0,0,0]]
+```
+Given the above grid, return 0.
+
+Note: The length of each dimension in the given grid does not exceed 50.
+
+Solution:
+```cpp
+class Solution {
+public:
+    int maxAreaOfIsland(vector<vector<int>>& grid) {
+        
+    }
+};
+```
+
+## 268. Missing Number
+
+Given an array containing n distinct numbers taken from 0, 1, 2, ..., n, find the one that is missing from the array.
+
+Example 1:
+```
+Input: [3,0,1]
+Output: 2
+```
+Example 2:
+```
+Input: [9,6,4,2,3,5,7,0,1]
+Output: 8
+```
+Note:
+
+Your algorithm should run in linear runtime complexity. Could you implement it using only constant extra space complexity?
+
+Solution:
+```cpp
+class Solution {
+public:
+    int missingNumber(vector<int>& nums) {
+        
+    }
+};
+```
+
+## 123. Best Time to Buy and Sell Stock III
+
+Say you have an array for which the ith element is the price of a given stock on day i.
+
+Design an algorithm to find the maximum profit. You may complete at most two transactions.
+
+Note: You may not engage in multiple transactions at the same time (i.e., you must sell the stock before you buy again).
+
+Example 1:
+```
+Input: [3,3,5,0,0,3,1,4]
+Output: 6
+Explanation: Buy on day 4 (price = 0) and sell on day 6 (price = 3), profit = 3-0 = 3.
+             Then buy on day 7 (price = 1) and sell on day 8 (price = 4), profit = 4-1 = 3.
+```
+Example 2:
+```
+Input: [1,2,3,4,5]
+Output: 4
+Explanation: Buy on day 1 (price = 1) and sell on day 5 (price = 5), profit = 5-1 = 4.
+             Note that you cannot buy on day 1, buy on day 2 and sell them later, as you are
+             engaging multiple transactions at the same time. You must sell before buying again.
+```
+Example 3:
+```
+Input: [7,6,4,3,1]
+Output: 0
+Explanation: In this case, no transaction is done, i.e. max profit = 0.
+```
+
+Solution:
+```cpp
+class Solution {
+public:
+    int maxProfit(vector<int>& prices) {
+        
+    }
+};
+```
+
+## 697. Degree of an Array
+
+Given a non-empty array of non-negative integers nums, the degree of this array is defined as the maximum frequency of any one of its elements.
+
+Your task is to find the smallest possible length of a (contiguous) subarray of nums, that has the same degree as nums.
+
+Example 1:
+```
+Input: [1, 2, 2, 3, 1]
+Output: 2
+Explanation: 
+The input array has a degree of 2 because both elements 1 and 2 appear twice.
+Of the subarrays that have the same degree:
+[1, 2, 2, 3, 1], [1, 2, 2, 3], [2, 2, 3, 1], [1, 2, 2], [2, 2, 3], [2, 2]
+The shortest length is 2. So return 2.
+```
+Example 2:
+```
+Input: [1,2,2,3,1,4,2]
+Output: 6
+```
+Note:
+
+- nums.length will be between 1 and 50,000.
+- nums[i] will be an integer between 0 and 49,999.
+
+Solution:
+```cpp
+class Solution {
+public:
+    int findShortestSubArray(vector<int>& nums) {
+        
+    }
+};
+```
+
+## 717. 1-bit and 2-bit Characters
+
+We have two special characters. The first character can be represented by one bit 0. The second character can be represented by two bits (10 or 11).
+
+Now given a string represented by several bits. Return whether the last character must be a one-bit character or not. The given string will always end with a zero.
+
+Example 1:
+```
+Input: 
+bits = [1, 0, 0]
+Output: True
+Explanation: 
+The only way to decode it is two-bit character and one-bit character. 
+So the last character is one-bit character.
+```
+Example 2:
+```
+Input: 
+bits = [1, 1, 1, 0]
+Output: False
+Explanation: 
+The only way to decode it is two-bit character and two-bit character. 
+So the last character is NOT one-bit character.
+```
+Note:
+
+- 1 <= len(bits) <= 1000.
+- bits[i] is always 0 or 1.
+
+Solution:
+```cpp
+class Solution {
+public:
+    bool isOneBitCharacter(vector<int>& bits) {
+        
+    }
+};
+```
+
+## 62. Unique Paths
+
+A robot is located at the top-left corner of a m x n grid (marked 'Start' in the diagram below).
+
+The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked 'Finish' in the diagram below).
+
+How many possible unique paths are there?
+
+![](https://assets.leetcode.com/uploads/2018/10/22/robot_maze.png)
+
+Above is a 7 x 3 grid. How many possible unique paths are there?
+
+Example 1:
+```
+Input: m = 3, n = 2
+Output: 3
+Explanation:
+From the top-left corner, there are a total of 3 ways to reach the bottom-right corner:
+1. Right -> Right -> Down
+2. Right -> Down -> Right
+3. Down -> Right -> Right
+```
+
+Example 2:
+```
+Input: m = 7, n = 3
+Output: 28
+ ```
+
+Constraints:
+
+- 1 <= m, n <= 100
+- It's guaranteed that the answer will be less than or equal to 2 * 10 ^ 9.
+
+Solution:
+```cpp
+class Solution {
+public:
+    int uniquePaths(int m, int n) {
+        
+    }
+};
+```
+
+## 280. Wiggle Sort
+
+Given an unsorted array nums, reorder it in-place such that nums[0] <= nums[1] >= nums[2] <= nums[3]....
+
+Example:
+```
+Input: nums = [3,5,2,1,6,4]
+Output: One possible answer is [3,5,1,6,2,4]
+```
+
+Solution:
+```cpp
+class Solution {
+public:
+    void wiggleSort(vector<int>& nums) {
+        
+    }
+};
+```
+
+## 84. Largest Rectangle in Histogram
+
+Given n non-negative integers representing the histogram's bar height where the width of each bar is 1, find the area of largest rectangle in the histogram.
+
+ ![](https://assets.leetcode.com/uploads/2018/10/12/histogram.png)
+
+Above is a histogram where width of each bar is 1, given height = [2,1,5,6,2,3].
+
+![](https://assets.leetcode.com/uploads/2018/10/12/histogram_area.png)
+
+The largest rectangle is shown in the shaded area, which has area = 10 unit.
+
+Example:
+```
+Input: [2,1,5,6,2,3]
+Output: 10
+```
+
+Solution:
+```cpp
+class Solution {
+public:
+    int largestRectangleArea(vector<int>& heights) {
+        
+    }
+};
+```
+
+## 75. Sort Colors
+
+Given an array with n objects colored red, white or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white and blue.
+
+Here, we will use the integers 0, 1, and 2 to represent the color red, white, and blue respectively.
+
+Note: You are not suppose to use the library's sort function for this problem.
+
+Example:
+```
+Input: [2,0,2,1,1,0]
+Output: [0,0,1,1,2,2]
+```
+Follow up:
+
+- A rather straight forward solution is a two-pass algorithm using counting sort.
+First, iterate the array counting number of 0's, 1's, and 2's, then overwrite array with total number of 0's, then 1's and followed by 2's.
+- Could you come up with a one-pass algorithm using only constant space?
+
+Solution:
+```cpp
+class Solution {
+public:
+    void sortColors(vector<int>& nums) {
+        
+    }
+};
+```
+
+## 73. Set Matrix Zeroes
+
+Given a m x n matrix, if an element is 0, set its entire row and column to 0. Do it in-place.
+
+Example 1:
+```
+Input: 
+[
+  [1,1,1],
+  [1,0,1],
+  [1,1,1]
+]
+Output: 
+[
+  [1,0,1],
+  [0,0,0],
+  [1,0,1]
+]
+```
+Example 2:
+```
+Input: 
+[
+  [0,1,2,0],
+  [3,4,5,2],
+  [1,3,1,5]
+]
+Output: 
+[
+  [0,0,0,0],
+  [0,4,5,0],
+  [0,3,1,0]
+]
+```
+Follow up:
+
+- A straight forward solution using O(mn) space is probably a bad idea.
+- A simple improvement uses O(m + n) space, but still not the best solution.
+- Could you devise a constant space solution?
+
+Solution:
+```cpp
+class Solution {
+public:
+    void setZeroes(vector<vector<int>>& matrix) {
+        
+    }
+};
+```
+
+## 189. Rotate Array
+
+Given an array, rotate the array to the right by k steps, where k is non-negative.
+
+Follow up:
+
+Try to come up as many solutions as you can, there are at least 3 different ways to solve this problem.
+Could you do it in-place with O(1) extra space?
+ 
+
+Example 1:
+```
+Input: nums = [1,2,3,4,5,6,7], k = 3
+Output: [5,6,7,1,2,3,4]
+Explanation:
+rotate 1 steps to the right: [7,1,2,3,4,5,6]
+rotate 2 steps to the right: [6,7,1,2,3,4,5]
+rotate 3 steps to the right: [5,6,7,1,2,3,4]
+```
+Example 2:
+```
+Input: nums = [-1,-100,3,99], k = 2
+Output: [3,99,-1,-100]
+Explanation: 
+rotate 1 steps to the right: [99,-1,-100,3]
+rotate 2 steps to the right: [3,99,-1,-100]
+ ```
+
+Constraints:
+
+- 1 <= nums.length <= 2 * 10^4
+- It's guaranteed that nums[i] fits in a 32 bit-signed integer.
+- k >= 0
+
+Solution:
+
+```cpp
+class Solution {
+public:
+    void rotate(vector<int>& nums, int k) {
+        
+    }
+};
+```
