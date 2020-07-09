@@ -3369,3 +3369,794 @@ public:
     }
 };
 ```
+
+## 964. Least Operators to Express Number
+
+Given a single positive integer x, we will write an expression of the form x (op1) x (op2) x (op3) x ... where each operator op1, op2, etc. is either addition, subtraction, multiplication, or division (+, -, *, or /).  For example, with x = 3, we might write 3 * 3 / 3 + 3 - 3 which is a value of 3.
+
+When writing such an expression, we adhere to the following conventions:
+
+- The division operator (/) returns rational numbers.
+- There are no parentheses placed anywhere.
+- We use the usual order of operations: multiplication and division happens before addition and subtraction.
+- It's not allowed to use the unary negation operator (-).  For example, "x - x" is a valid expression as it only uses subtraction, but "-x + x" is not because it uses negation.
+
+We would like to write an expression with the least number of operators such that the expression equals the given target.  Return the least number of operators used.
+
+ 
+
+Example 1:
+```
+Input: x = 3, target = 19
+Output: 5
+Explanation: 3 * 3 + 3 * 3 + 3 / 3. 
+The expression contains 5 operations.
+```
+Example 2:
+```
+Input: x = 5, target = 501
+Output: 8
+Explanation: 5 * 5 * 5 * 5 - 5 * 5 * 5 + 5 / 5.  
+The expression contains 8 operations.
+```
+Example 3:
+```
+Input: x = 100, target = 100000000
+Output: 3
+Explanation: 100 * 100 * 100 * 100.  
+The expression contains 3 operations.
+``` 
+
+Note:
+
+- 2 <= x <= 100
+- 1 <= target <= 2 * 10^8
+
+Solution:
+```cpp
+class Solution {
+public:
+    int leastOpsExpressTarget(int x, int target) {
+        
+    }
+};
+```
+
+## 474. Ones and Zeroes
+
+Given an array, strs, with strings consisting of only 0s and 1s. Also two integers m and n.
+
+Now your task is to find the maximum number of strings that you can form with given m 0s and n 1s. Each 0 and 1 can be used at most once.
+
+ 
+
+Example 1:
+```
+Input: strs = ["10","0001","111001","1","0"], m = 5, n = 3
+Output: 4
+Explanation: This are totally 4 strings can be formed by 
+the using of 5 0s and 3 1s, which are "10","0001","1","0".
+```
+Example 2:
+```
+Input: strs = ["10","0","1"], m = 1, n = 1
+Output: 2
+Explanation: You could form "10", but then you'd have
+nothing left. Better form "0" and "1".
+ ```
+
+Constraints:
+
+- 1 <= strs.length <= 600
+- 1 <= strs[i].length <= 100
+- strs[i] consists only of digits '0' and '1'.
+- 1 <= m, n <= 100
+
+Solution:
+```cpp
+class Solution {
+public:
+    int findMaxForm(vector<string>& strs, int m, int n) {
+        
+    }
+};
+```
+
+## 935. Knight Dialer
+
+A chess knight can move as indicated in the chess diagram below:
+
+![](https://assets.leetcode.com/uploads/2018/10/30/keypad.png)
+
+This time, we place our chess knight on any numbered key of a phone pad (indicated above), and the knight makes N-1 hops.  Each hop must be from one key to another numbered key.
+
+Each time it lands on a key (including the initial placement of the knight), it presses the number of that key, pressing N digits total.
+
+How many distinct numbers can you dial in this manner?
+
+Since the answer may be large, output the answer modulo 10^9 + 7.
+
+ 
+
+Example 1:
+```
+Input: 1
+Output: 10
+```
+Example 2:
+```
+Input: 2
+Output: 20
+```
+Example 3:
+```
+Input: 3
+Output: 46
+``` 
+
+Note:
+
+- 1 <= N <= 5000
+
+Solution:
+```cpp
+class Solution {
+public:
+    int knightDialer(int N) {
+        
+    }
+};
+```
+
+## 276. Paint Fence
+
+There is a fence with n posts, each post can be painted with one of the k colors.
+
+You have to paint all the posts such that no more than two adjacent fence posts have the same color.
+
+Return the total number of ways you can paint the fence.
+
+Note:
+n and k are non-negative integers.
+
+Example:
+```
+Input: n = 3, k = 2
+Output: 6
+Explanation: Take c1 as color 1, c2 as color 2. All possible ways are:
+
+            post1  post2  post3      
+ -----      -----  -----  -----       
+   1         c1     c1     c2 
+   2         c1     c2     c1 
+   3         c1     c2     c2 
+   4         c2     c1     c1  
+   5         c2     c1     c2
+   6         c2     c2     c1
+```
+
+Solution:
+```cpp
+class Solution {
+public:
+    int numWays(int n, int k) {
+        
+    }
+};
+```
+
+## 688. Knight Probability in Chessboard
+
+On an NxN chessboard, a knight starts at the r-th row and c-th column and attempts to make exactly K moves. The rows and columns are 0 indexed, so the top-left square is (0, 0), and the bottom-right square is (N-1, N-1).
+
+A chess knight has 8 possible moves it can make, as illustrated below. Each move is two squares in a cardinal direction, then one square in an orthogonal direction.
+ 
+![](https://assets.leetcode.com/uploads/2018/10/12/knight.png)
+
+Each time the knight is to move, it chooses one of eight possible moves uniformly at random (even if the piece would go off the chessboard) and moves there.
+
+The knight continues moving until it has made exactly K moves or has moved off the chessboard. Return the probability that the knight remains on the board after it has stopped moving.
+
+ 
+
+Example:
+```
+Input: 3, 2, 0, 0
+Output: 0.0625
+Explanation: There are two moves (to (1,2), (2,1)) 
+that will keep the knight on the board.
+From each of those positions, there are also two moves 
+that will keep the knight on the board.
+The total probability the knight stays on the board 
+is 0.0625.
+ ```
+
+Note:
+
+- N will be between 1 and 25.
+- K will be between 0 and 100.
+- The knight always initially starts on the board.
+
+Solution:
+```cpp
+class Solution {
+public:
+    double knightProbability(int N, int K, int r, int c) {
+        
+    }
+};
+```
+
+## 650. 2 Keys Keyboard
+
+Initially on a notepad only one character 'A' is present. You can perform two operations on this notepad for each step:
+
+- Copy All: You can copy all the characters present on the notepad (partial copy is not allowed).
+- Paste: You can paste the characters which are copied last time.
+ 
+
+Given a number n. You have to get exactly n 'A' on the notepad by performing the minimum number of steps permitted. Output the minimum number of steps to get n 'A'.
+
+Example 1:
+```
+Input: 3
+Output: 3
+Explanation:
+Intitally, we have one character 'A'.
+In step 1, we use Copy All operation.
+In step 2, we use Paste operation to get 'AA'.
+In step 3, we use Paste operation to get 'AAA'.
+``` 
+
+Note:
+
+- The n will be in the range [1, 1000].
+
+Solution:
+```cpp
+class Solution {
+public:
+    int minSteps(int n) {
+        
+    }
+};
+```
+
+## 664. Strange Printer
+
+There is a strange printer with the following two special requirements:
+
+- The printer can only print a sequence of the same character each time.
+- At each turn, the printer can print new characters starting from and ending at any places, and will cover the original existing characters.
+
+Given a string consists of lower English letters only, your job is to count the minimum number of turns the printer needed in order to print it.
+
+Example 1:
+```
+Input: "aaabbb"
+Output: 2
+Explanation: Print "aaa" first and then print "bbb".
+```
+Example 2:
+```
+Input: "aba"
+Output: 2
+Explanation: Print "aaa" first and then print "b" from 
+the second place of the string, which will cover the 
+existing character 'a'.
+```
+Hint: Length of the given string will not exceed 100.
+
+Solution:
+```cpp
+class Solution {
+public:
+    int strangePrinter(string s) {
+        
+    }
+};
+```
+
+## 673. Number of Longest Increasing Subsequence
+
+Given an unsorted array of integers, find the number of longest increasing subsequence.
+
+Example 1:
+```
+Input: [1,3,5,4,7]
+Output: 2
+Explanation: The two longest increasing subsequence are 
+[1, 3, 4, 7] and [1, 3, 5, 7].
+```
+Example 2:
+```
+Input: [2,2,2,2,2]
+Output: 5
+Explanation: The length of longest continuous increasing
+subsequence is 1, and there are 5 subsequences' length is 
+1, so output 5.
+```
+Note: Length of the given array will be not exceed 2000 and the answer is guaranteed to be fit in 32-bit signed int.
+
+Solution:
+```cpp
+class Solution {
+public:
+    int findNumberOfLIS(vector<int>& nums) {
+        
+    }
+};
+```
+
+## 63. Unique Paths II
+
+A robot is located at the top-left corner of a m x n grid (marked 'Start' in the diagram below).
+
+The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked 'Finish' in the diagram below).
+
+Now consider if some obstacles are added to the grids. How many unique paths would there be?
+
+![](https://assets.leetcode.com/uploads/2018/10/22/robot_maze.png)
+
+An obstacle and empty space is marked as 1 and 0 respectively in the grid.
+
+Note: m and n will be at most 100.
+
+Example 1:
+```
+Input:
+[
+  [0,0,0],
+  [0,1,0],
+  [0,0,0]
+]
+Output: 2
+Explanation:
+There is one obstacle in the middle of the 3x3 grid above.
+There are two ways to reach the bottom-right corner:
+1. Right -> Right -> Down -> Down
+2. Down -> Down -> Right -> Right
+```
+
+Solution:
+```cpp
+class Solution {
+public:
+    int uniquePathsWithObstacles(vector<vector<int>>& obstacleGrid) {
+        
+    }
+};
+```
+
+## 486. Predict the Winner
+
+Given an array of scores that are non-negative integers. Player 1 picks one of the numbers from either end of the array followed by the player 2 and then player 1 and so on. Each time a player picks a number, that number will not be available for the next player. This continues until all the scores have been chosen. The player with the maximum score wins.
+
+Given an array of scores, predict whether player 1 is the winner. You can assume each player plays to maximize his score.
+
+Example 1:
+```
+Input: [1, 5, 2]
+Output: False
+Explanation: Initially, player 1 can choose between 1 and 2. 
+
+If he chooses 2 (or 1), then player 2 can choose from 1 (or 2) 
+and 5. If player 2 chooses 5, then player 1 will be left with 1 (or 2). 
+
+So, final score of player 1 is 1 + 2 = 3, and player 2 is 5. 
+Hence, player 1 will never be the winner and you need to return False.
+```
+
+Example 2:
+```
+Input: [1, 5, 233, 7]
+Output: True
+Explanation: Player 1 first chooses 1. Then player 2 have to choose 
+between 5 and 7. No matter which number player 2 choose, player 1 
+can choose 233.
+Finally, player 1 has more score (234) than player 2 (12), so you 
+need to return True representing player1 can win.
+```
+
+Note:
+- 1 <= length of the array <= 20.
+- Any scores in the given array are non-negative integers and will not exceed 10,000,000.
+- If the scores of both players are equal, then player 1 is still the winner.
+
+Solution:
+```cpp
+class Solution {
+public:
+    bool PredictTheWinner(vector<int>& nums) {
+        
+    }
+};
+```
+
+## 472. Concatenated Words
+
+Given a list of words (without duplicates), please write a program that returns all concatenated words in the given list of words.
+A concatenated word is defined as a string that is comprised entirely of at least two shorter words in the given array.
+
+Example:
+```
+Input: [
+    "cat","cats","catsdogcats","dog","dogcatsdog",
+    "hippopotamuses","rat","ratcatdogcat"
+]
+
+Output: ["catsdogcats","dogcatsdog","ratcatdogcat"]
+
+Explanation: "catsdogcats" can be concatenated by "cats", "dog" and "cats"; 
+ "dogcatsdog" can be concatenated by "dog", "cats" and "dog"; 
+"ratcatdogcat" can be concatenated by "rat", "cat", "dog" and "cat".
+```
+Note:
+- The number of elements of the given array will not exceed 10,000
+- The length sum of elements in the given array will not exceed 600,000.
+- All the input string will only include lower case letters.
+- The returned elements order does not matter.
+
+Solution:
+```cpp
+class Solution {
+public:
+    vector<string> findAllConcatenatedWordsInADict(vector<string>& words) {
+        
+    }
+};
+```
+
+## 376. Wiggle Subsequence
+
+A sequence of numbers is called a wiggle sequence if the differences between successive numbers strictly alternate between positive and negative. The first difference (if one exists) may be either positive or negative. A sequence with fewer than two elements is trivially a wiggle sequence.
+
+For example, [1,7,4,9,2,5] is a wiggle sequence because the differences (6,-3,5,-7,3) are alternately positive and negative. In contrast, [1,4,7,2,5] and [1,7,4,5,5] are not wiggle sequences, the first because its first two differences are positive and the second because its last difference is zero.
+
+Given a sequence of integers, return the length of the longest subsequence that is a wiggle sequence. A subsequence is obtained by deleting some number of elements (eventually, also zero) from the original sequence, leaving the remaining elements in their original order.
+
+Example 1:
+```
+Input: [1,7,4,9,2,5]
+Output: 6
+Explanation: The entire sequence is a wiggle sequence.
+```
+
+Example 2:
+```
+Input: [1,17,5,10,13,15,10,5,16,8]
+Output: 7
+Explanation: There are several subsequences that achieve 
+this length. One is [1,17,10,13,10,16,8].
+```
+Example 3:
+```
+Input: [1,2,3,4,5,6,7,8,9]
+Output: 2
+```
+Follow up:
+Can you do it in O(n) time?
+
+Solution:
+```cpp
+
+class Solution {
+public:
+    int wiggleMaxLength(vector<int>& nums) {
+        
+    }
+};
+```
+
+## 931. Minimum Falling Path Sum
+
+Given a square array of integers A, we want the minimum sum of a falling path through A.
+
+A falling path starts at any element in the first row, and chooses one element from each row.  The next row's choice must be in a column that is different from the previous row's column by at most one.
+
+
+Example 1:
+```
+Input: [[1,2,3],[4,5,6],[7,8,9]]
+Output: 12
+Explanation: 
+The possible falling paths are:
+```
+- [1,4,7], [1,4,8], [1,5,7], [1,5,8], [1,5,9]
+- [2,4,7], [2,4,8], [2,5,7], [2,5,8], [2,5,9], [2,6,8], [2,6,9]
+- [3,5,7], [3,5,8], [3,5,9], [3,6,8], [3,6,9]
+
+The falling path with the smallest sum is [1,4,7], so the answer is 12.
+
+ 
+
+Constraints:
+
+- 1 <= A.length == A[0].length <= 100
+- -100 <= A[i][j] <= 100
+
+Solution:
+```cpp
+class Solution {
+public:
+    int minFallingPathSum(vector<vector<int>>& A) {
+        
+    }
+};
+```
+
+## 898. Bitwise ORs of Subarrays
+
+We have an array A of non-negative integers.
+
+For every (contiguous) subarray B = [A[i], A[i+1], ..., A[j]] (with i <= j), we take the bitwise OR of all the elements in B, obtaining a result A[i] | A[i+1] | ... | A[j].
+
+Return the number of possible results.  (Results that occur more than once are only counted once in the final answer.)
+
+ 
+
+Example 1:
+```
+Input: [0]
+Output: 1
+Explanation: 
+There is only one possible result: 0.
+```
+Example 2:
+```
+Input: [1,1,2]
+Output: 3
+Explanation: 
+The possible subarrays are [1], [1], [2], [1, 1],
+[1, 2], [1, 1, 2].
+These yield the results 1, 1, 2, 1, 3, 3.
+There are 3 unique values, so the answer is 3.
+```
+Example 3:
+```
+Input: [1,2,4]
+Output: 6
+Explanation: 
+The possible results are 1, 2, 3, 4, 6, and 7.
+ ```
+
+Note:
+
+- 1 <= A.length <= 50000
+- 0 <= A[i] <= 10^9
+
+Solution:
+```cpp
+class Solution {
+public:
+    int subarrayBitwiseORs(vector<int>& A) {
+        
+    }
+};
+```
+
+## 1039. Minimum Score Triangulation of Polygon
+
+Given N, consider a convex N-sided polygon with vertices labelled A[0], A[i], ..., A[N-1] in clockwise order.
+
+Suppose you triangulate the polygon into N-2 triangles.  For each triangle, the value of that triangle is the product of the labels of the vertices, and the total score of the triangulation is the sum of these values over all N-2 triangles in the triangulation.
+
+Return the smallest possible total score that you can achieve with some triangulation of the polygon.
+
+ 
+
+Example 1:
+```
+Input: [1,2,3]
+Output: 6
+Explanation: The polygon is already triangulated,
+and the score of the only triangle is 6.
+```
+Example 2:
+
+![](https://assets.leetcode.com/uploads/2019/05/01/minimum-score-triangulation-of-polygon-1.png)
+
+```
+Input: [3,7,4,5]
+Output: 144
+Explanation: There are two triangulations, with possible
+scores: 3*7*5 + 4*5*7 = 245, or 3*4*5 + 3*4*7 = 144. 
+The minimum score is 144.
+```
+Example 3:
+```
+Input: [1,3,1,4,1,5]
+Output: 13
+Explanation: The minimum score triangulation has 
+score 1*1*3 + 1*1*4 + 1*1*5 + 1*1*1 = 13.
+``` 
+
+Note:
+
+- 3 <= A.length <= 50
+- 1 <= A[i] <= 100
+
+Solution:
+```cpp
+class Solution {
+public:
+    int minScoreTriangulation(vector<int>& A) {
+        
+    }
+};
+```
+
+## 801. Minimum Swaps To Make Sequences Increasing
+
+We have two integer sequences A and B of the same non-zero length.
+
+We are allowed to swap elements A[i] and B[i].  Note that both elements are in the same index position in their respective sequences.
+
+At the end of some number of swaps, A and B are both strictly increasing.  (A sequence is strictly increasing if and only if A[0] < A[1] < A[2] < ... < A[A.length - 1].)
+
+Given A and B, return the minimum number of swaps to make both sequences strictly increasing.  It is guaranteed that the given input always makes it possible.
+
+Example:
+```
+Input: A = [1,3,5,4], B = [1,2,3,7]
+Output: 1
+Explanation: 
+Swap A[3] and B[3].  Then the sequences are:
+A = [1, 3, 5, 7] and B = [1, 2, 3, 4]
+which are both strictly increasing.
+```
+Note:
+
+- A, B are arrays with the same length, and that length will be in the range [1, 1000].
+- A[i], B[i] are integer values in the range [0, 2000].
+
+Solution:
+```cpp
+class Solution {
+public:
+    int minSwap(vector<int>& A, vector<int>& B) {
+        
+    }
+};
+```
+
+## 361. Bomb Enemy
+
+Given a 2D grid, each cell is either a wall 'W', an enemy 'E' or empty '0' (the number zero), return the maximum enemies you can kill using one bomb.
+The bomb kills all the enemies in the same row and column from the planted point until it hits the wall since the wall is too strong to be destroyed.
+Note: You can only put the bomb at an empty cell.
+
+Example:
+```
+Input: [
+   ["0","E","0","0"],["E","0","W","E"],["0","E","0","0"]]
+Output: 3 
+Explanation: For the given grid,
+
+0 E 0 0 
+E 0 W E 
+0 E 0 0
+
+Placing a bomb at (1,1) kills 3 enemies.
+```
+
+Solution:
+```cpp
+class Solution {
+public:
+    int maxKilledEnemies(vector<vector<char>>& grid) {
+        
+    }
+};
+```
+
+## 968. Binary Tree Cameras
+
+Given a binary tree, we install cameras on the nodes of the tree. 
+
+Each camera at a node can monitor its parent, itself, and its immediate children.
+
+Calculate the minimum number of cameras needed to monitor all nodes of the tree.
+
+ 
+
+Example 1:
+
+![](https://assets.leetcode.com/uploads/2018/12/29/bst_cameras_01.png)
+```        
+Input: [0,0,null,0,0]
+Output: 1
+Explanation: One camera is enough to monitor all nodes if placed as shown.
+```
+Example 2:
+
+![](https://assets.leetcode.com/uploads/2018/12/29/bst_cameras_02.png)
+ 
+```
+Input: [0,0,null,0,null,0,null,null,0]
+Output: 2
+Explanation: At least two cameras are needed 
+to monitor all nodes of the tree. The above 
+image shows one of the valid configurations 
+of camera placement.
+```
+Note:
+
+- The number of nodes in the given tree will be in the range [1, 1000].
+- Every node has value 0.
+
+Solution:
+```cpp
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
+public:
+    int minCameraCover(TreeNode* root) {
+        
+    }
+};
+```
+
+838. Push Dominoes
+Medium
+
+543
+
+63
+
+Add to List
+
+Share
+There are N dominoes in a line, and we place each domino vertically upright.
+
+In the beginning, we simultaneously push some of the dominoes either to the left or to the right.
+
+![](https://s3-lc-upload.s3.amazonaws.com/uploads/2018/05/18/domino.png)
+
+After each second, each domino that is falling to the left pushes the adjacent domino on the left.
+
+Similarly, the dominoes falling to the right push their adjacent dominoes standing on the right.
+
+When a vertical domino has dominoes falling on it from both sides, it stays still due to the balance of the forces.
+
+For the purposes of this question, we will consider that a falling domino expends no additional force to a falling or already fallen domino.
+
+Given a string "S" representing the initial state. S[i] = 'L', if the i-th domino has been pushed to the left; S[i] = 'R', if the i-th domino has been pushed to the right; S[i] = '.', if the i-th domino has not been pushed.
+
+Return a string representing the final state. 
+
+Example 1:
+```
+Input: ".L.R...LR..L.."
+Output: "LL.RR.LLRRLL.."
+```
+Example 2:
+```
+Input: "RR.L"
+Output: "RR.L"
+Explanation: The first domino expends no additional
+force on the second domino.
+```
+Note:
+
+- 0 <= N <= 10^5
+- String dominoes contains only 'L', 'R' and '.'
+
+Solution:
+```cpp
+class Solution {
+public:
+    string pushDominoes(string dominoes) {
+        
+    }
+};
+```
