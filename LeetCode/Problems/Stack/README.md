@@ -1803,3 +1803,162 @@ public:
     }
 };
 ```
+
+## 385. Mini Parser
+ 
+Given a nested list of integers represented as a string, implement a parser to deserialize it.
+
+Each element is either an integer, or a list -- whose elements may also be integers or other lists.
+
+Note: You may assume that the string is well-formed:
+
+String is non-empty.
+String does not contain white spaces.
+String contains only digits 0-9, [, - ,, ].
+ 
+
+Example 1:
+```
+Given s = "324",
+
+You should return a NestedInteger object which contains a single integer 324.
+```
+
+Example 2:
+```
+Given s = "[123,[456,[789]]]",
+
+Return a NestedInteger object containing a nested list with 2 elements:
+
+1. An integer containing value 123.
+2. A nested list containing two elements:
+    i.  An integer containing value 456.
+    ii. A nested list with one element:
+         a. An integer containing value 789.
+```
+
+Solution:
+```cpp
+/**
+ * // This is the interface that allows for creating nested lists.
+ * // You should not implement it, or speculate about its implementation
+ * class NestedInteger {
+ *   public:
+ *     // Constructor initializes an empty nested list.
+ *     NestedInteger();
+ *
+ *     // Constructor initializes a single integer.
+ *     NestedInteger(int value);
+ *
+ *     // Return true if this NestedInteger holds a single integer, rather than a nested list.
+ *     bool isInteger() const;
+ *
+ *     // Return the single integer that this NestedInteger holds, if it holds a single integer
+ *     // The result is undefined if this NestedInteger holds a nested list
+ *     int getInteger() const;
+ *
+ *     // Set this NestedInteger to hold a single integer.
+ *     void setInteger(int value);
+ *
+ *     // Set this NestedInteger to hold a nested list and adds a nested integer to it.
+ *     void add(const NestedInteger &ni);
+ *
+ *     // Return the nested list that this NestedInteger holds, if it holds a nested list
+ *     // The result is undefined if this NestedInteger holds a single integer
+ *     const vector<NestedInteger> &getList() const;
+ * };
+ */
+class Solution {
+public:
+    NestedInteger deserialize(string s) {
+        
+    }
+};
+```
+
+## 1124. Longest Well-Performing Interval
+ 
+We are given hours, a list of the number of hours worked per day for a given employee.
+
+A day is considered to be a tiring day if and only if the number of hours worked is (strictly) greater than 8.
+
+A well-performing interval is an interval of days for which the number of tiring days is strictly larger than the number of non-tiring days.
+
+Return the length of the longest well-performing interval.
+
+ 
+
+Example 1:
+```
+Input: hours = [9,9,6,0,6,6,9]
+Output: 3
+Explanation: The longest well-performing interval is [9,9,6].
+```
+
+Constraints:
+
+- 1 <= hours.length <= 10000
+- 0 <= hours[i] <= 16
+
+Solution:
+```cpp
+class Solution {
+public:
+    int longestWPI(vector<int>& hours) {
+        
+    }
+};
+```
+
+## 71. Simplify Path
+
+Given an absolute path for a file (Unix-style), simplify it. Or in other words, convert it to the canonical path.
+
+In a UNIX-style file system, a period . refers to the current directory. Furthermore, a double period .. moves the directory up a level.
+
+Note that the returned canonical path must always begin with a slash /, and there must be only a single slash / between two directory names. The last directory name (if it exists) must not end with a trailing /. Also, the canonical path must be the shortest string representing the absolute path.
+
+Example 1:
+```
+Input: "/home/"
+Output: "/home"
+Explanation: Note that there is no trailing slash after the last directory name.
+```
+Example 2:
+```
+Input: "/../"
+Output: "/"
+Explanation: Going one level up from the root directory is a no-op, as the root level is the highest level you can go.
+```
+Example 3:
+```
+Input: "/home//foo/"
+Output: "/home/foo"
+Explanation: In the canonical path, multiple consecutive slashes are replaced by a single one.
+```
+Example 4:
+```
+Input: "/a/./b/../../c/"
+Output: "/c"
+```
+Example 5:
+```
+Input: "/a/../../b/../c//.//"
+Output: "/c"
+```
+Example 6:
+```
+Input: "/a//b////c/d//././/.."
+Output: "/a/b/c"
+```
+
+Solution:
+```cpp
+
+class Solution {
+public:
+    string simplifyPath(string path) {
+        
+    }
+};
+```
