@@ -12,7 +12,7 @@ Given a valid parentheses string S, consider its primitive decomposition: S = P_
 Return S after removing the outermost parentheses of every primitive string in the primitive decomposition of S.
 
 Example 1:
-``
+```
 Input: "(()())(())"
 Output: "()()()"
 Explanation: 
