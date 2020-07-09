@@ -2500,14 +2500,21 @@ Example 2:
 
 ![](https://assets.leetcode.com/uploads/2020/04/23/min_time_collect_apple_2.png)
 ```
-Input: n = 7, edges = [[0,1],[0,2],[1,4],[1,5],[2,3],[2,6]], hasApple = [false,false,true,false,false,true,false]
+Input: n = 7, 
+edges = [[0,1],[0,2],[1,4],[1,5],[2,3],[2,6]], 
+hasApple = [false,false,true,false,false,true,false]
+
 Output: 6
-Explanation: The figure above represents the given tree where red vertices have an apple. One optimal path to collect all apples is shown by the green arrows.  
+
+Explanation: The figure above represents the given tree where red vertices have an apple.
+One optimal path to collect all apples is shown by the green arrows.  
 ```
 
 Example 3:
 ```
-Input: n = 7, edges = [[0,1],[0,2],[1,4],[1,5],[2,3],[2,6]], hasApple = [false,false,false,false,false,false,false]
+Input: n = 7, edges = [[0,1],[0,2],[1,4],[1,5],[2,3],[2,6]],
+hasApple = [false,false,false,false,false,false,false]
+
 Output: 0
 ```
 
@@ -2519,3 +2526,13 @@ Constraints:
 - 0 <= fromi, toi <= n-1
 - fromi < toi
 - hasApple.length == n
+
+Solution:
+```cpp
+class Solution {
+public:
+    int minTime(int n, vector<vector<int>>& edges, vector<bool>& hasApple) {
+        
+    }
+};
+```
