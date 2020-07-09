@@ -3135,3 +3135,91 @@ public:
     }
 };
 ```
+
+## 449. Serialize and Deserialize BST
+
+Serialization is the process of converting a data structure or object into a sequence of bits so that it can be stored in a file or memory buffer, or transmitted across a network connection link to be reconstructed later in the same or another computer environment.
+
+Design an algorithm to serialize and deserialize a binary search tree. There is no restriction on how your serialization/deserialization algorithm should work. You just need to ensure that a binary search tree can be serialized to a string and this string can be deserialized to the original tree structure.
+
+The encoded string should be as compact as possible.
+
+Note: Do not use class member/global/static variables to store states. Your serialize and deserialize algorithms should be stateless.
+
+Solution:
+```cpp
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
+class Codec {
+public:
+
+    // Encodes a tree to a single string.
+    string serialize(TreeNode* root) {
+        
+    }
+
+    // Decodes your encoded data to tree.
+    TreeNode* deserialize(string data) {
+        
+    }
+};
+
+// Your Codec object will be instantiated and called as such:
+// Codec codec;
+// codec.deserialize(codec.serialize(root));
+```
+
+## 1145. Binary Tree Coloring Game
+
+Two players play a turn based game on a binary tree.  We are given the root of this binary tree, and the number of nodes n in the tree.  n is odd, and each node has a distinct value from 1 to n.
+
+Initially, the first player names a value x with 1 <= x <= n, and the second player names a value y with 1 <= y <= n and y != x.  The first player colors the node with value x red, and the second player colors the node with value y blue.
+
+Then, the players take turns starting with the first player.  In each turn, that player chooses a node of their color (red if player 1, blue if player 2) and colors an uncolored neighbor of the chosen node (either the left child, right child, or parent of the chosen node.)
+
+If (and only if) a player cannot choose such a node in this way, they must pass their turn.  If both players pass their turn, the game ends, and the winner is the player that colored more nodes.
+
+You are the second player.  If it is possible to choose such a y to ensure you win the game, return true.  If it is not possible, return false.
+
+
+Example 1:
+
+![](https://assets.leetcode.com/uploads/2019/08/01/1480-binary-tree-coloring-game.png)
+
+Input: root = [1,2,3,4,5,6,7,8,9,10,11], n = 11, x = 3
+Output: true
+Explanation: The second player can choose the node with value 2.
+
+Constraints:
+
+- root is the root of a binary tree with n nodes and distinct node values from 1 to n.
+- n is odd.
+- 1 <= x <= n <= 100
+
+Solution:
+```cpp
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
+public:
+    bool btreeGameWinningMove(TreeNode* root, int n, int x) {
+        
+    }
+};
+```
