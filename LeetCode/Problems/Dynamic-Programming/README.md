@@ -2700,3 +2700,128 @@ public:
     }
 };
 ```
+
+## 1048. Longest String Chain
+
+Given a list of words, each word consists of English lowercase letters.
+
+Let's say word1 is a predecessor of word2 if and only if we can add exactly one letter anywhere in word1 to make it equal to word2.  For example, "abc" is a predecessor of "abac".
+
+A word chain is a sequence of words [word_1, word_2, ..., word_k] with k >= 1, where word_1 is a predecessor of word_2, word_2 is a predecessor of word_3, and so on.
+
+Return the longest possible length of a word chain with words chosen from the given list of words.
+
+Example 1:
+```
+Input: ["a","b","ba","bca","bda","bdca"]
+Output: 4
+Explanation: one of the longest word chain is "a","ba","bda","bdca".
+```
+
+Note:
+
+- 1 <= words.length <= 1000
+- 1 <= words[i].length <= 16
+- words[i] only consists of English lowercase letters.
+
+Solution:
+```cpp
+class Solution {
+public:
+    int longestStrChain(vector<string>& words) {
+        
+    }
+};
+```
+
+## 256. Paint House
+
+There are a row of n houses, each house can be painted with one of the three colors: red, blue or green. The cost of painting each house with a certain color is different. You have to paint all the houses such that no two adjacent houses have the same color.
+
+The cost of painting each house with a certain color is represented by a n x 3 cost matrix. For example, costs[0][0] is the cost of painting house 0 with color red; costs[1][2] is the cost of painting house 1 with color green, and so on... Find the minimum cost to paint all houses.
+
+Note:
+All costs are positive integers.
+
+Example:
+```
+Input: [[17,2,17],[16,16,5],[14,3,19]]
+Output: 10
+Explanation: Paint house 0 into blue, paint house 1 into green, paint house 2 into blue. 
+             Minimum cost: 2 + 5 + 3 = 10.
+```
+
+Solution:
+```cpp
+class Solution {
+public:
+    int minCost(vector<vector<int>>& costs) {
+        
+    }
+};
+```
+
+## 712. Minimum ASCII Delete Sum for Two Strings
+
+Given two strings s1, s2, find the lowest ASCII sum of deleted characters to make two strings equal.
+
+Example 1:
+```
+Input: s1 = "sea", s2 = "eat"
+Output: 231
+Explanation: Deleting "s" from "sea" adds the ASCII value of "s" (115) to the sum.
+Deleting "t" from "eat" adds 116 to the sum.
+At the end, both strings are equal, and 115 + 116 = 231 is the minimum sum possible
+to achieve this.
+```
+Example 2:
+```
+Input: s1 = "delete", s2 = "leet"
+Output: 403
+Explanation: Deleting "dee" from "delete" to turn the string into "let",
+adds 100[d]+101[e]+101[e] to the sum.  Deleting "e" from "leet" adds 101[e] to the sum.
+At the end, both strings are equal to "let", and the answer is 100+101+101+101 = 403.
+If instead we turned both strings into "lee" or "eet", we would get 
+answers of 433 or 417, which are higher.
+```
+Note:
+
+- 0 < s1.length, s2.length <= 1000.
+- All elements of each string will have an ASCII value in [97, 122].
+
+Solution:
+```cpp
+class Solution {
+public:
+    int minimumDeleteSum(string s1, string s2) {
+        
+    }
+};
+```
+
+## 646. Maximum Length of Pair Chain
+
+You are given n pairs of numbers. In every pair, the first number is always smaller than the second number.
+
+Now, we define a pair (c, d) can follow another pair (a, b) if and only if b < c. Chain of pairs can be formed in this fashion.
+
+Given a set of pairs, find the length longest chain which can be formed. You needn't use up all the given pairs. You can select pairs in any order.
+
+Example 1:
+```
+Input: [[1,2], [2,3], [3,4]]
+Output: 2
+Explanation: The longest chain is [1,2] -> [3,4]
+```
+Note:
+- The number of given pairs will be in the range [1, 1000].
+
+Solution:
+```cpp
+class Solution {
+public:
+    int findLongestChain(vector<vector<int>>& pairs) {
+        
+    }
+};
+```
