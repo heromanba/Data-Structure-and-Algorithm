@@ -2292,3 +2292,411 @@ public:
     }
 };
 ```
+
+## 714. Best Time to Buy and Sell Stock with Transaction Fee
+
+Your are given an array of integers prices, for which the i-th element is the price of a given stock on day i; and a non-negative integer fee representing a transaction fee.
+
+You may complete as many transactions as you like, but you need to pay the transaction fee for each transaction. You may not buy more than 1 share of a stock at a time (ie. you must sell the stock share before you buy again.)
+
+Return the maximum profit you can make.
+
+Example 1:
+```
+Input: prices = [1, 3, 2, 8, 4, 9], fee = 2
+Output: 8
+Explanation: The maximum profit can be achieved by:
+Buying at prices[0] = 1
+Selling at prices[3] = 8
+Buying at prices[4] = 4
+Selling at prices[5] = 9
+The total profit is ((8 - 1) - 2) + ((9 - 4) - 2) = 8.
+```
+Note:
+
+- 0 < prices.length <= 50000.
+- 0 < prices[i] < 50000.
+- 0 <= fee < 50000.
+
+Solution:
+```cpp
+class Solution {
+public:
+    int maxProfit(vector<int>& prices, int fee) {
+        
+    }
+};
+```
+
+## 132. Palindrome Partitioning II
+
+Given a string s, partition s such that every substring of the partition is a palindrome.
+
+Return the minimum cuts needed for a palindrome partitioning of s.
+
+Example:
+```
+Input: "aab"
+Output: 1
+Explanation: The palindrome partitioning ["aa","b"] could be produced using 1 cut.
+```
+
+Solution:
+```cpp
+class Solution {
+public:
+    int minCut(string s) {
+        
+    }
+};
+```
+
+## 403. Frog Jump
+
+A frog is crossing a river. The river is divided into x units and at each unit there may or may not exist a stone. The frog can jump on a stone, but it must not jump into the water.
+
+Given a list of stones' positions (in units) in sorted ascending order, determine if the frog is able to cross the river by landing on the last stone. Initially, the frog is on the first stone and assume the first jump must be 1 unit.
+
+If the frog's last jump was k units, then its next jump must be either k - 1, k, or k + 1 units. Note that the frog can only jump in the forward direction.
+
+Note:
+
+- The number of stones is ≥ 2 and is < 1,100.
+- Each stone's position will be a non-negative integer < 231.
+- The first stone's position is always 0.
+
+Example 1:
+```
+[0,1,3,5,6,8,12,17]
+
+There are a total of 8 stones.
+The first stone at the 0th unit, second stone at the 1st unit,
+third stone at the 3rd unit, and so on...
+The last stone at the 17th unit.
+
+Return true. The frog can jump to the last stone by jumping 
+1 unit to the 2nd stone, then 2 units to the 3rd stone, then 
+2 units to the 4th stone, then 3 units to the 6th stone, 
+4 units to the 7th stone, and 5 units to the 8th stone.
+```
+Example 2:
+```
+[0,1,2,3,4,8,9,11]
+
+Return false. There is no way to jump to the last stone as 
+the gap between the 5th and 6th stone is too large.
+```
+
+Solution:
+```cpp
+class Solution {
+public:
+    bool canCross(vector<int>& stones) {
+        
+    }
+};
+```
+
+## 304. Range Sum Query 2D - Immutable
+
+Given a 2D matrix matrix, find the sum of the elements inside the rectangle defined by its upper left corner (row1, col1) and lower right corner (row2, col2).
+
+![](https://leetcode.com/static/images/courses/range_sum_query_2d.png)
+
+The above rectangle (with the red border) is defined by (row1, col1) = (2, 1) and (row2, col2) = (4, 3), which contains sum = 8.
+
+Example:
+```
+Given matrix = [
+  [3, 0, 1, 4, 2],
+  [5, 6, 3, 2, 1],
+  [1, 2, 0, 1, 5],
+  [4, 1, 0, 1, 7],
+  [1, 0, 3, 0, 5]
+]
+
+sumRegion(2, 1, 4, 3) -> 8
+sumRegion(1, 1, 2, 2) -> 11
+sumRegion(1, 2, 2, 4) -> 12
+```
+Note:
+- You may assume that the matrix does not change.
+- There are many calls to sumRegion function.
+- You may assume that row1 ≤ row2 and col1 ≤ col2.
+
+Solution:
+```cpp
+class NumMatrix {
+public:
+    NumMatrix(vector<vector<int>>& matrix) {
+        
+    }
+    
+    int sumRegion(int row1, int col1, int row2, int col2) {
+        
+    }
+};
+
+/**
+ * Your NumMatrix object will be instantiated and called as such:
+ * NumMatrix* obj = new NumMatrix(matrix);
+ * int param_1 = obj->sumRegion(row1,col1,row2,col2);
+ */
+```
+
+## 943. Find the Shortest Superstring
+
+Given an array A of strings, find any smallest string that contains each string in A as a substring.
+
+We may assume that no string in A is substring of another string in A.
+
+ 
+Example 1:
+```
+Input: ["alex","loves","leetcode"]
+Output: "alexlovesleetcode"
+Explanation: All permutations of "alex","loves","leetcode" would also be accepted.
+```
+Example 2:
+```
+Input: ["catg","ctaagt","gcta","ttca","atgcatc"]
+Output: "gctaagttcatgcatc"
+```
+
+Note:
+
+- 1 <= A.length <= 12
+- 1 <= A[i].length <= 20
+
+Solution:
+```cpp
+class Solution {
+public:
+    string shortestSuperstring(vector<string>& A) {
+        
+    }
+};
+```
+
+## 1314. Matrix Block Sum
+
+Given a m * n matrix mat and an integer K, return a matrix answer where each answer[i][j] is the sum of all elements mat[r][c] for i - K <= r <= i + K, j - K <= c <= j + K, and (r, c) is a valid position in the matrix.
+
+Example 1:
+```
+Input: mat = [[1,2,3],[4,5,6],[7,8,9]], K = 1
+Output: [[12,21,16],[27,45,33],[24,39,28]]
+```
+Example 2:
+```
+Input: mat = [[1,2,3],[4,5,6],[7,8,9]], K = 2
+Output: [[45,45,45],[45,45,45],[45,45,45]]
+```
+
+Constraints:
+
+- m == mat.length
+- n == mat[i].length
+- 1 <= m, n, K <= 100
+- 1 <= mat[i][j] <= 100
+
+Solution:
+```cpp
+class Solution {
+public:
+    vector<vector<int>> matrixBlockSum(vector<vector<int>>& mat, int K) {
+        
+    }
+};
+```
+
+## 740. Delete and Earn
+
+Given an array nums of integers, you can perform operations on the array.
+
+In each operation, you pick any nums[i] and delete it to earn nums[i] points. After, you must delete every element equal to nums[i] - 1 or nums[i] + 1.
+
+You start with 0 points. Return the maximum number of points you can earn by applying such operations.
+
+Example 1:
+```
+Input: nums = [3, 4, 2]
+Output: 6
+Explanation: 
+Delete 4 to earn 4 points, consequently 3 is also deleted.
+Then, delete 2 to earn 2 points. 6 total points are earned.
+```
+
+Example 2:
+```
+Input: nums = [2, 2, 3, 3, 3, 4]
+Output: 9
+Explanation: 
+Delete 3 to earn 3 points, deleting both 2's and the 4.
+Then, delete 3 again to earn 3 points, and 3 again to earn 3 points.
+9 total points are earned.
+``` 
+
+Note:
+
+- The length of nums is at most 20000.
+- Each element nums[i] is an integer in the range [1, 10000].
+
+Solution:
+```cpp
+class Solution {
+public:
+    int deleteAndEarn(vector<int>& nums) {
+        
+    }
+};
+```
+
+## 638. Shopping Offers
+
+In LeetCode Store, there are some kinds of items to sell. Each item has a price.
+
+However, there are some special offers, and a special offer consists of one or more different kinds of items with a sale price.
+
+You are given the each item's price, a set of special offers, and the number we need to buy for each item. The job is to output the lowest price you have to pay for exactly certain items as given, where you could make optimal use of the special offers.
+
+Each special offer is represented in the form of an array, the last number represents the price you need to pay for this special offer, other numbers represents how many specific items you could get if you buy this offer.
+
+You could use any of special offers as many times as you want.
+
+Example 1:
+```
+Input: [2,5], [[3,0,5],[1,2,10]], [3,2]
+Output: 14
+Explanation: 
+There are two kinds of items, A and B. Their prices are $2 and $5 respectively. 
+In special offer 1, you can pay $5 for 3A and 0B
+In special offer 2, you can pay $10 for 1A and 2B. 
+You need to buy 3A and 2B, so you may pay $10 for 1A and 2B (special offer #2), 
+and $4 for 2A.
+```
+Example 2:
+```
+Input: [2,3,4], [[1,1,0,4],[2,2,1,9]], [1,2,1]
+Output: 11
+Explanation: 
+The price of A is $2, and $3 for B, $4 for C. 
+You may pay $4 for 1A and 1B, and $9 for 2A ,2B and 1C. 
+You need to buy 1A ,2B and 1C, so you may pay $4 for 1A and 1B 
+(special offer #1), and $3 for 1B, $4 for 1C. 
+You cannot add more items, though only $9 for 2A ,2B and 1C.
+```
+
+Note:
+- There are at most 6 kinds of items, 100 special offers.
+- For each item, you need to buy at most 6 of them.
+- You are not allowed to buy more items than you want, even if that would lower the overall price.
+
+Solution:
+```cpp
+class Solution {
+public:
+    int shoppingOffers(vector<int>& price, vector<vector<int>>& special, vector<int>& needs) {
+        
+    }
+};
+```
+
+## 956. Tallest Billboard
+
+You are installing a billboard and want it to have the largest height.  The billboard will have two steel supports, one on each side.  Each steel support must be an equal height.
+
+You have a collection of rods which can be welded together.  For example, if you have rods of lengths 1, 2, and 3, you can weld them together to make a support of length 6.
+
+Return the largest possible height of your billboard installation.  If you cannot support the billboard, return 0.
+
+ 
+
+Example 1:
+```
+Input: [1,2,3,6]
+Output: 6
+Explanation: We have two disjoint subsets {1,2,3} and {6}, 
+which have the same sum = 6.
+```
+Example 2:
+```
+Input: [1,2,3,4,5,6]
+Output: 10
+Explanation: We have two disjoint subsets {2,3,5} and {4,6}, 
+which have the same sum = 10.
+```
+
+Example 3:
+```
+Input: [1,2]
+Output: 0
+Explanation: The billboard cannot be supported, so we return 0.
+``` 
+
+Note:
+
+- 0 <= rods.length <= 20
+- 1 <= rods[i] <= 1000
+- The sum of rods is at most 5000.
+
+Solution:
+```cpp
+class Solution {
+public:
+    int tallestBillboard(vector<int>& rods) {
+        
+    }
+};
+```
+
+## 887. Super Egg Drop
+
+You are given K eggs, and you have access to a building with N floors from 1 to N. 
+
+Each egg is identical in function, and if an egg breaks, you cannot drop it again.
+
+You know that there exists a floor F with 0 <= F <= N such that any egg dropped at a floor higher than F will break, and any egg dropped at or below floor F will not break.
+
+Each move, you may take an egg (if you have an unbroken one) and drop it from any floor X (with 1 <= X <= N). 
+
+Your goal is to know with certainty what the value of F is.
+
+What is the minimum number of moves that you need to know with certainty what F is, regardless of the initial value of F?
+ 
+
+Example 1:
+```
+Input: K = 1, N = 2
+Output: 2
+Explanation: 
+Drop the egg from floor 1.  If it breaks, we know with certainty that F = 0.
+Otherwise, drop the egg from floor 2.  If it breaks, we know with certainty that F = 1.
+If it didn't break, then we know with certainty F = 2.
+Hence, we needed 2 moves in the worst case to know what F is with certainty.
+```
+Example 2:
+```
+Input: K = 2, N = 6
+Output: 3
+```
+Example 3:
+```
+Input: K = 3, N = 14
+Output: 4
+```
+
+Note:
+
+- 1 <= K <= 100
+- 1 <= N <= 10000
+
+Solution:
+```cpp
+class Solution {
+public:
+    int superEggDrop(int K, int N) {
+        
+    }
+};
+```
