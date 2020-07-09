@@ -180,3 +180,99 @@ public:
     }
 };
 ```
+
+## 312. Burst Balloons
+
+Given n balloons, indexed from 0 to n-1. Each balloon is painted with a number on it represented by array nums. You are asked to burst all the balloons. If the you burst balloon i you will get nums[left] * nums[i] * nums[right] coins. Here left and right are adjacent indices of i. After the burst, the left and right then becomes adjacent.
+
+Find the maximum coins you can collect by bursting the balloons wisely.
+
+Note:
+
+- You may imagine nums[-1] = nums[n] = 1. They are not real therefore you can not burst them.
+- 0 ≤ n ≤ 500, 0 ≤ nums[i] ≤ 100
+
+Example:
+
+```
+Input: [3,1,5,8]
+Output: 167 
+Explanation: nums = [3,1,5,8] --> [3,5,8] -->   [3,8]   -->  [8]  --> []
+             coins =  3*1*5      +  3*5*8    +  1*3*8      + 1*8*1   = 167
+```
+
+Solution:
+```cpp
+class Solution {
+public:
+    int maxCoins(vector<int>& nums) {
+        
+    }
+};
+```
+
+## 96. Unique Binary Search Trees
+
+Given n, how many structurally unique BST's (binary search trees) that store values 1 ... n?
+
+Example:
+```
+Input: 3
+Output: 5
+Explanation:
+Given n = 3, there are a total of 5 unique BST's:
+
+   1         3     3      2      1
+    \       /     /      / \      \
+     3     2     1      1   3      2
+    /     /       \                 \
+   2     1         2                 3
+```
+
+Solution:
+```cpp
+class Solution {
+public:
+    int numTrees(int n) {
+        
+    }
+};
+```
+
+## 70. Climbing Stairs
+
+You are climbing a stair case. It takes n steps to reach to the top.
+
+Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
+
+Example 1:
+```
+Input: 2
+Output: 2
+Explanation: There are two ways to climb to the top.
+1. 1 step + 1 step
+2. 2 steps
+```
+Example 2:
+```
+Input: 3
+Output: 3
+Explanation: There are three ways to climb to the top.
+1. 1 step + 1 step + 1 step
+2. 1 step + 2 steps
+3. 2 steps + 1 step
+```
+
+Constraints:
+
+- 1 <= n <= 45
+
+Solution:
+```cpp
+class Solution {
+public:
+    int climbStairs(int n) {
+        
+    }
+};
+```
