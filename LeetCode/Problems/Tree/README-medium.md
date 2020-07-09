@@ -4838,16 +4838,8 @@ public:
 };
 ```
 
-1339. Maximum Product of Splitted Binary Tree
-Medium
+## 1339. Maximum Product of Splitted Binary Tree
 
-270
-
-26
-
-Add to List
-
-Share
 Given a binary tree root. Split the binary tree into two subtrees by removing 1 edge such that the product of the sums of the subtrees are maximized.
 
 Since the answer may be too large, return it modulo 10^9 + 7.
@@ -4907,6 +4899,51 @@ Solution:
 class Solution {
 public:
     int maxProduct(TreeNode* root) {
+        
+    }
+};
+```
+
+## 333. Largest BST Subtree
+
+Given a binary tree, find the largest subtree which is a Binary Search Tree (BST), where largest means subtree with largest number of nodes in it.
+
+Note:
+A subtree must include all of its descendants.
+
+Example:
+```
+Input: [10,5,15,1,8,null,7]
+
+   10 
+   / \ 
+  5  15 
+ / \   \ 
+1   8   7
+
+Output: 3
+Explanation: The Largest BST Subtree in this case is the highlighted one.
+             The return value is the subtree's size, which is 3.
+```
+Follow up:
+Can you figure out ways to solve it with O(n) time complexity?
+
+Solution:
+```cpp
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
+public:
+    int largestBSTSubtree(TreeNode* root) {
         
     }
 };
