@@ -592,8 +592,38 @@ customStack.pop();    // return -1 --> Stack is empty return -1.
 
 Constraints:
 
-1 <= maxSize <= 1000
-1 <= x <= 1000
-1 <= k <= 1000
-0 <= val <= 100
-At most 1000 calls will be made to each method of increment, push and pop each separately.
+- 1 <= maxSize <= 1000
+- 1 <= x <= 1000
+- 1 <= k <= 1000
+- 0 <= val <= 100
+- At most 1000 calls will be made to each method of increment, push and pop each separately.
+
+Solution:
+```cpp
+class CustomStack {
+public:
+    CustomStack(int maxSize) {
+        
+    }
+    
+    void push(int x) {
+        
+    }
+    
+    int pop() {
+        
+    }
+    
+    void increment(int k, int val) {
+        
+    }
+};
+
+/**
+ * Your CustomStack object will be instantiated and called as such:
+ * CustomStack* obj = new CustomStack(maxSize);
+ * obj->push(x);
+ * int param_2 = obj->pop();
+ * obj->increment(k,val);
+ */
+```
