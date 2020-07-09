@@ -1,6 +1,6 @@
 
 # Queue
-Sorted by frequency, only includes green and yellow.
+Sorted by frequency, only includes **green** and **yellow**.
 
 ## 621. Task Scheduler
  
