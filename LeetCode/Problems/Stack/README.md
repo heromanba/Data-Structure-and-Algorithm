@@ -985,7 +985,7 @@ S.next(85) is called and returns 6.
 
 Note that (for example) S.next(75) returned 4, because the last 4 prices
 (including today's price of 75) were less than or equal to today's price.
- 
+```
 
 Note:
 
