@@ -1709,3 +1709,97 @@ public:
     }
 };
 ```
+
+
+## 331. Verify Preorder Serialization of a Binary Tree
+
+One way to serialize a binary tree is to use pre-order traversal. When we encounter a non-null node, we record the node's value. If it is a null node, we record using a sentinel value such as #.
+```
+     _9_
+    /   \
+   3     2
+  / \   / \
+ 4   1  #  6
+/ \ / \   / \
+# # # #   # #
+```
+For example, the above binary tree can be serialized to the string "9,3,4,#,#,1,#,#,2,#,6,#,#", where # represents a null node.
+
+Given a string of comma separated values, verify whether it is a correct preorder traversal serialization of a binary tree. Find an algorithm without reconstructing the tree.
+
+Each comma separated value in the string must be either an integer or a character '#' representing null pointer.
+
+You may assume that the input format is always valid, for example it could never contain two consecutive commas such as "1,,3".
+
+Example 1:
+```
+Input: "9,3,4,#,#,1,#,#,2,#,6,#,#"
+Output: true
+```
+Example 2:
+```
+Input: "1,#"
+Output: false
+```
+Example 3:
+```
+Input: "9,#,#,1"
+Output: false
+```
+
+Solution:
+```cpp
+class Solution {
+public:
+    bool isValidSerialization(string preorder) {
+        
+    }
+};
+```
+
+## 150. Evaluate Reverse Polish Notation
+
+Evaluate the value of an arithmetic expression in Reverse Polish Notation.
+
+Valid operators are +, -, *, /. Each operand may be an integer or another expression.
+
+Note:
+
+- Division between two integers should truncate toward zero.
+- The given RPN expression is always valid. That means the expression would always evaluate to a result and there won't be any divide by zero operation.
+
+Example 1:
+```
+Input: ["2", "1", "+", "3", "*"]
+Output: 9
+Explanation: ((2 + 1) * 3) = 9
+```
+Example 2:
+```
+Input: ["4", "13", "5", "/", "+"]
+Output: 6
+Explanation: (4 + (13 / 5)) = 6
+```
+Example 3:
+```
+Input: ["10", "6", "9", "3", "+", "-11", "*", "/", "*", "17", "+", "5", "+"]
+Output: 22
+Explanation: 
+  ((10 * (6 / ((9 + 3) * -11))) + 17) + 5
+= ((10 * (6 / (12 * -11))) + 17) + 5
+= ((10 * (6 / -132)) + 17) + 5
+= ((10 * 0) + 17) + 5
+= (0 + 17) + 5
+= 17 + 5
+= 22
+```
+
+Solution:
+```cpp
+class Solution {
+public:
+    int evalRPN(vector<string>& tokens) {
+        
+    }
+};
+```
