@@ -2825,3 +2825,547 @@ public:
     }
 };
 ```
+
+## 1000. Minimum Cost to Merge Stones
+
+There are N piles of stones arranged in a row.  The i-th pile has stones[i] stones.
+
+A move consists of merging exactly K consecutive piles into one pile, and the cost of this move is equal to the total number of stones in these K piles.
+
+Find the minimum cost to merge all piles of stones into one pile.  If it is impossible, return -1.
+
+ 
+
+Example 1:
+```
+Input: stones = [3,2,4,1], K = 2
+Output: 20
+Explanation: 
+We start with [3, 2, 4, 1].
+We merge [3, 2] for a cost of 5, and we are left with [5, 4, 1].
+We merge [4, 1] for a cost of 5, and we are left with [5, 5].
+We merge [5, 5] for a cost of 10, and we are left with [10].
+The total cost was 20, and this is the minimum possible.
+```
+Example 2:
+```
+Input: stones = [3,2,4,1], K = 3
+Output: -1
+Explanation: After any merge operation, there are 2 piles left, 
+and we can't merge anymore.  So the task is impossible.
+```
+Example 3:
+```
+Input: stones = [3,5,1,2,6], K = 3
+Output: 25
+Explanation: 
+We start with [3, 5, 1, 2, 6].
+We merge [5, 1, 2] for a cost of 8, and we are left with [3, 8, 6].
+We merge [3, 8, 6] for a cost of 17, and we are left with [17].
+The total cost was 25, and this is the minimum possible.
+ ```
+
+Note:
+
+- 1 <= stones.length <= 30
+- 2 <= K <= 30
+- 1 <= stones[i] <= 100
+
+Solution:
+```cpp
+class Solution {
+public:
+    int mergeStones(vector<int>& stones, int K) {
+        
+    }
+};
+```
+
+## 975. Odd Even Jump
+
+You are given an integer array A.  From some starting index, you can make a series of jumps.  The (1st, 3rd, 5th, ...) jumps in the series are called odd numbered jumps, and the (2nd, 4th, 6th, ...) jumps in the series are called even numbered jumps.
+
+You may from index i jump forward to index j (with i < j) in the following way:
+
+- During odd numbered jumps (ie. jumps 1, 3, 5, ...), you jump to the index j such that A[i] <= A[j] and A[j] is the smallest possible value.  If there are multiple such indexes j, you can only jump to the smallest such index j.
+- During even numbered jumps (ie. jumps 2, 4, 6, ...), you jump to the index j such that A[i] >= A[j] and A[j] is the largest possible value.  If there are multiple such indexes j, you can only jump to the smallest such index j.
+- (It may be the case that for some index i, there are no legal jumps.)
+A starting index is good if, starting from that index, you can reach the end of the array (index A.length - 1) by jumping some number of times (possibly 0 or more than once.)
+
+Return the number of good starting indexes.
+
+ 
+
+Example 1:
+```
+Input: [10,13,12,14,15]
+Output: 2
+Explanation: 
+From starting index i = 0, we can jump to i = 2 (since A[2] is the smallest among A[1], A[2], A[3], A[4] that is greater or equal to A[0]), then we can't jump any more.
+From starting index i = 1 and i = 2, we can jump to i = 3, then we can't jump any more.
+From starting index i = 3, we can jump to i = 4, so we've reached the end.
+From starting index i = 4, we've reached the end already.
+In total, there are 2 different starting indexes (i = 3, i = 4) where we can reach the end with some number of jumps.
+```
+
+Example 2:
+```
+Input: [2,3,1,1,4]
+Output: 3
+Explanation: 
+From starting index i = 0, we make jumps to i = 1, i = 2, i = 3:
+
+During our 1st jump (odd numbered), we first jump to i = 1 because A[1] 
+is the smallest value in (A[1], A[2], A[3], A[4]) that is greater than 
+or equal to A[0].
+
+During our 2nd jump (even numbered), we jump from i = 1 to i = 2 because 
+A[2] is the largest value in (A[2], A[3], A[4]) that is less than or equal 
+to A[1].  A[3] is also the largest value, but 2 is a smaller index, so we 
+can only jump to i = 2 and not i = 3.
+
+During our 3rd jump (odd numbered), we jump from i = 2 to i = 3 because 
+A[3] is the smallest value in (A[3], A[4]) that is greater than or equal 
+to A[2].
+
+We can't jump from i = 3 to i = 4, so the starting index i = 0 is not good.
+
+In a similar manner, we can deduce that:
+From starting index i = 1, we jump to i = 4, so we reach the end.
+From starting index i = 2, we jump to i = 3, and then we can't jump anymore.
+From starting index i = 3, we jump to i = 4, so we reach the end.
+From starting index i = 4, we are already at the end.
+
+In total, there are 3 different starting indexes (i = 1, i = 3, i = 4) 
+where we can reach the end with some number of jumps.
+```
+Example 3:
+
+Input: [5,1,3,4,2]
+Output: 3
+Explanation: 
+We can reach the end from starting indexes 1, 2, and 4.
+ 
+
+Note:
+
+- 1 <= A.length <= 20000
+- 0 <= A[i] < 100000
+
+Solution:
+```cpp
+class Solution {
+public:
+    int oddEvenJumps(vector<int>& A) {
+        
+    }
+};
+```
+
+## 903. Valid Permutations for DI Sequence
+
+We are given S, a length n string of characters from the set {'D', 'I'}. (These letters stand for "decreasing" and "increasing".)
+
+A valid permutation is a permutation P[0], P[1], ..., P[n] of integers {0, 1, ..., n}, such that for all i:
+
+- If S[i] == 'D', then P[i] > P[i+1], and;
+- If S[i] == 'I', then P[i] < P[i+1].
+
+How many valid permutations are there?  Since the answer may be large, return your answer modulo 10^9 + 7.
+
+ 
+
+Example 1:
+```
+Input: "DID"
+Output: 5
+Explanation: 
+The 5 valid permutations of (0, 1, 2, 3) are:
+(1, 0, 3, 2)
+(2, 0, 3, 1)
+(2, 1, 3, 0)
+(3, 0, 2, 1)
+(3, 1, 2, 0)
+```
+
+Note:
+
+- 1 <= S.length <= 200
+- S consists only of characters from the set {'D', 'I'}.
+
+Solution:
+```cpp
+class Solution {
+public:
+    int numPermsDISequence(string S) {
+        
+    }
+};
+```
+
+## 813. Largest Sum of Averages
+
+We partition a row of numbers A into at most K adjacent (non-empty) groups, then our score is the sum of the average of each group. What is the largest score we can achieve?
+
+Note that our partition must use every number in A, and that scores are not necessarily integers.
+
+Example:
+```
+Input: 
+A = [9,1,2,3,9]
+K = 3
+Output: 20
+Explanation: 
+The best choice is to partition A into [9], [1, 2, 3], [9]. 
+The answer is 9 + (1 + 2 + 3) / 3 + 9 = 20.
+We could have also partitioned A into [9, 1], [2], [3, 9], 
+for example.
+That partition would lead to a score of 5 + 2 + 6 = 13, which is worse.
+```
+
+Note:
+
+- 1 <= A.length <= 100.
+- 1 <= A[i] <= 10000.
+- 1 <= K <= A.length.
+- Answers within 10^-6 of the correct answer will be accepted as correct.
+
+Solution: 
+```cpp
+class Solution {
+public:
+    double largestSumOfAverages(vector<int>& A, int K) {
+        
+    }
+};
+```
+
+## 368. Largest Divisible Subset
+
+Given a set of distinct positive integers, find the largest subset such that every pair (Si, Sj) of elements in this subset satisfies:
+
+Si % Sj = 0 or Sj % Si = 0.
+
+If there are multiple solutions, return any subset is fine.
+
+Example 1:
+```
+Input: [1,2,3]
+Output: [1,2] (of course, [1,3] will also be ok)
+```
+
+Example 2:
+```
+Input: [1,2,4,8]
+Output: [1,2,4,8]
+```
+
+Solution:
+```cpp
+class Solution {
+public:
+    vector<int> largestDivisibleSubset(vector<int>& nums) {
+        
+    }
+};
+```
+
+## 213. House Robber II
+
+You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed. All houses at this place are arranged in a circle. That means the first house is the neighbor of the last one. Meanwhile, adjacent houses have security system connected and it will automatically contact the police if two adjacent houses were broken into on the same night.
+
+Given a list of non-negative integers representing the amount of money of each house, determine the maximum amount of money you can rob tonight without alerting the police.
+
+Example 1:
+```
+Input: [2,3,2]
+Output: 3
+Explanation: You cannot rob house 1 (money = 2) and then rob house 3 (money = 2),
+             because they are adjacent houses.
+```
+
+Example 2:
+```
+Input: [1,2,3,1]
+Output: 4
+Explanation: Rob house 1 (money = 1) and then rob house 3 (money = 3).
+             Total amount you can rob = 1 + 3 = 4.
+```
+
+Solution:
+```cpp
+class Solution {
+public:
+    int rob(vector<int>& nums) {
+        
+    }
+};
+```
+
+## 494. Target Sum
+
+You are given a list of non-negative integers, a1, a2, ..., an, and a target, S. Now you have 2 symbols + and -. For each integer, you should choose one from + and - as its new symbol.
+
+Find out how many ways to assign symbols to make sum of integers equal to target S.
+
+Example 1:
+```
+Input: nums is [1, 1, 1, 1, 1], S is 3. 
+Output: 5
+Explanation: 
+
+-1+1+1+1+1 = 3
++1-1+1+1+1 = 3
++1+1-1+1+1 = 3
++1+1+1-1+1 = 3
++1+1+1+1-1 = 3
+
+There are 5 ways to assign symbols to make the sum of nums be target 3.
+```
+
+Constraints:
+
+- The length of the given array is positive and will not exceed 20.
+- The sum of elements in the given array will not exceed 1000.
+- Your output answer is guaranteed to be fitted in a 32-bit integer.
+
+Solution:
+```cpp
+class Solution {
+public:
+    int findTargetSumWays(vector<int>& nums, int S) {
+        
+    }
+};
+```
+
+## 377. Combination Sum IV
+
+Given an integer array with all positive numbers and no duplicates, find the number of possible combinations that add up to a positive integer target.
+
+Example:
+```
+nums = [1, 2, 3]
+target = 4
+
+The possible combination ways are:
+(1, 1, 1, 1)
+(1, 1, 2)
+(1, 2, 1)
+(1, 3)
+(2, 1, 1)
+(2, 2)
+(3, 1)
+
+Note that different sequences are counted as different combinations.
+
+Therefore the output is 7.
+ ```
+
+Follow up:
+
+What if negative numbers are allowed in the given array?
+
+How does it change the problem?
+
+What limitation we need to add to the question to allow negative numbers?
+
+Credits:
+
+Special thanks to @pbrother for adding this problem and creating all test cases.
+
+Solution:
+```cpp
+class Solution {
+public:
+    int combinationSum4(vector<int>& nums, int target) {
+        
+    }
+};
+```
+
+## 1027. Longest Arithmetic Sequence
+
+Given an array A of integers, return the length of the longest arithmetic subsequence in A.
+
+Recall that a subsequence of A is a list A[i_1], A[i_2], ..., A[i_k] with 0 <= i_1 < i_2 < ... < i_k <= A.length - 1, and that a sequence B is arithmetic if B[i+1] - B[i] are all the same value (for 0 <= i < B.length - 1).
+
+ 
+
+Example 1:
+```
+Input: [3,6,9,12]
+Output: 4
+Explanation: 
+The whole array is an arithmetic sequence with steps of length = 3.
+```
+Example 2:
+```
+Input: [9,4,7,2,10]
+Output: 3
+Explanation: 
+The longest arithmetic subsequence is [4,7,10].
+```
+Example 3:
+```
+Input: [20,1,15,3,10,5,8]
+Output: 4
+Explanation: 
+The longest arithmetic subsequence is [20,15,10,5].
+``` 
+
+Note:
+
+- 2 <= A.length <= 2000
+- 0 <= A[i] <= 10000
+
+Solution:
+```cpp
+class Solution {
+public:
+    int longestArithSeqLength(vector<int>& A) {
+        
+    }
+};
+```
+
+## 416. Partition Equal Subset Sum
+
+Given a non-empty array containing only positive integers, find if the array can be partitioned into two subsets such that the sum of elements in both subsets is equal.
+
+Note:
+
+- Each of the array element will not exceed 100.
+- The array size will not exceed 200.
+ 
+
+Example 1:
+```
+Input: [1, 5, 11, 5]
+
+Output: true
+
+Explanation: The array can be partitioned as [1, 5, 5] and [11].
+``` 
+
+Example 2:
+```
+Input: [1, 2, 3, 5]
+
+Output: false
+
+Explanation: The array cannot be partitioned into equal sum subsets.
+```
+
+Soluton:
+```cpp
+class Solution {
+public:
+    bool canPartition(vector<int>& nums) {
+        
+    }
+};
+```
+
+## 464. Can I Win
+
+In the "100 game," two players take turns adding, to a running total, any integer from 1..10. The player who first causes the running total to reach or exceed 100 wins.
+
+What if we change the game so that players cannot re-use integers?
+
+For example, two players might take turns drawing from a common pool of numbers of 1..15 without replacement until they reach a total >= 100.
+
+Given an integer maxChoosableInteger and another integer desiredTotal, determine if the first player to move can force a win, assuming both players play optimally.
+
+You can always assume that maxChoosableInteger will not be larger than 20 and desiredTotal will not be larger than 300.
+
+Example
+```
+Input:
+maxChoosableInteger = 10
+desiredTotal = 11
+
+Output:
+false
+
+Explanation:
+No matter which integer the first player choose, the first player will lose.
+The first player can choose an integer from 1 up to 10.
+If the first player choose 1, the second player can only choose integers from 2 up to 10.
+The second player will win by choosing 10 and get a total = 11, which is >= desiredTotal.
+Same with other integers chosen by the first player, the second player will always win.
+```
+
+Solution:
+```cpp
+class Solution {
+public:
+    bool canIWin(int maxChoosableInteger, int desiredTotal) {
+        
+    }
+};
+```
+
+## 1105. Filling Bookcase Shelves
+
+We have a sequence of books: the i-th book has thickness books[i][0] and height books[i][1].
+
+We want to place these books in order onto bookcase shelves that have total width shelf_width.
+
+We choose some of the books to place on this shelf (such that the sum of their thickness is <= shelf_width), then build another level of shelf of the bookcase so that the total height of the bookcase has increased by the maximum height of the books we just put down.  We repeat this process until there are no more books to place.
+
+Note again that at each step of the above process, the order of the books we place is the same order as the given sequence of books.  For example, if we have an ordered list of 5 books, we might place the first and second book onto the first shelf, the third book on the second shelf, and the fourth and fifth book on the last shelf.
+
+Return the minimum possible height that the total bookshelf can be after placing shelves in this manner.
+
+Example 1:
+
+![](https://assets.leetcode.com/uploads/2019/06/24/shelves.png)
+
+```
+Input: books = [[1,1],[2,3],[2,3],[1,1],[1,1],[1,1],[1,2]], shelf_width = 4
+Output: 6
+Explanation:
+The sum of the heights of the 3 shelves are 1 + 3 + 2 = 6.
+Notice that book number 2 does not have to be on the first shelf.
+```
+
+Constraints:
+
+- 1 <= books.length <= 1000
+- 1 <= books[i][0] <= shelf_width <= 1000
+- 1 <= books[i][1] <= 1000
+
+## 689. Maximum Sum of 3 Non-Overlapping Subarrays
+
+In a given array nums of positive integers, find three non-overlapping subarrays with maximum sum.
+
+Each subarray will be of size k, and we want to maximize the sum of all 3*k entries.
+
+Return the result as a list of indices representing the starting position of each interval (0-indexed). If there are multiple answers, return the lexicographically smallest one.
+
+Example:
+```
+Input: [1,2,1,2,6,7,5,1], 2
+Output: [0, 3, 5]
+Explanation: Subarrays [1, 2], [2, 6], [7, 5] correspond to 
+the starting indices [0, 3, 5].
+We could have also taken [2, 1], but an answer of [1, 3, 5] 
+would be lexicographically larger.
+```
+
+Note:
+
+- nums.length will be between 1 and 20000.
+- nums[i] will be between 1 and 65535.
+- k will be between 1 and floor(nums.length / 3).
+
+Solution:
+```cpp
+class Solution {
+public:
+    vector<int> maxSumOfThreeSubarrays(vector<int>& nums, int k) {
+        
+    }
+};
+```
