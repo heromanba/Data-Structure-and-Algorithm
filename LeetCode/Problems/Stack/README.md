@@ -1,5 +1,5 @@
 
-# Stack
+# Stack (Easy + Medium)
 
 ## 1021. Remove Outermost Parentheses
 
