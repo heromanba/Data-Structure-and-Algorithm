@@ -1937,3 +1937,321 @@ public:
     }
 };
 ```
+
+## 1049. Last Stone Weight II
+
+We have a collection of rocks, each rock has a positive integer weight.
+
+Each turn, we choose any two rocks and smash them together.  Suppose the stones have weights x and y with x <= y.  The result of this smash is:
+
+- If x == y, both stones are totally destroyed;
+- If x != y, the stone of weight x is totally destroyed, and the stone of weight y has new weight y-x.
+
+At the end, there is at most 1 stone left.  Return the smallest possible weight of this stone (the weight is 0 if there are no stones left.)
+
+ 
+
+Example 1:
+```
+Input: [2,7,4,1,8,1]
+Output: 1
+Explanation: 
+We can combine 2 and 4 to get 2 so the array converts to [2,7,1,8,1] then,
+we can combine 7 and 8 to get 1 so the array converts to [2,1,1,1] then,
+we can combine 2 and 1 to get 1 so the array converts to [1,1,1] then,
+we can combine 1 and 1 to get 0 so the array converts to [1] then that's the optimal value.
+```
+
+Note:
+
+- 1 <= stones.length <= 30
+- 1 <= stones[i] <= 100
+
+Solution:
+```cpp
+class Solution {
+public:
+    int lastStoneWeightII(vector<int>& stones) {
+        
+    }
+};
+```
+
+## 321. Create Maximum Number
+
+Given two arrays of length m and n with digits 0-9 representing two numbers. Create the maximum number of length k <= m + n from digits of the two. The relative order of the digits from the same array must be preserved. Return an array of the k digits.
+
+Note: You should try to optimize your time and space complexity.
+
+Example 1:
+```
+Input:
+nums1 = [3, 4, 6, 5]
+nums2 = [9, 1, 2, 5, 8, 3]
+k = 5
+Output:
+[9, 8, 6, 5, 3]
+```
+Example 2:
+```
+Input:
+nums1 = [6, 7]
+nums2 = [6, 0, 4]
+k = 5
+Output:
+[6, 7, 6, 0, 4]
+```
+Example 3:
+```
+Input:
+nums1 = [3, 9]
+nums2 = [8, 9]
+k = 3
+Output:
+[9, 8, 9]
+```
+Solution:
+```cpp
+class Solution {
+public:
+    vector<int> maxNumber(vector<int>& nums1, vector<int>& nums2, int k) {
+        
+    }
+};
+```
+
+## 920. Number of Music Playlists
+
+Your music player contains N different songs and she wants to listen to L (not necessarily different) songs during your trip.  You create a playlist so that:
+
+Every song is played at least once
+A song can only be played again only if K other songs have been played
+Return the number of possible playlists.  As the answer can be very large, return it modulo 10^9 + 7.
+
+Example 1:
+```
+Input: N = 3, L = 3, K = 1
+Output: 6
+Explanation: There are 6 possible playlists. 
+[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2], [3, 2, 1].
+```
+Example 2:
+```
+Input: N = 2, L = 3, K = 0
+Output: 6
+Explanation: There are 6 possible playlists. [1, 1, 2], [1, 2, 1], 
+[2, 1, 1], [2, 2, 1], [2, 1, 2], [1, 2, 2]
+```
+Example 3:
+```
+Input: N = 2, L = 3, K = 1
+Output: 2
+Explanation: There are 2 possible playlists. [1, 2, 1], [2, 1, 2]
+```
+
+Note:
+
+- 0 <= K < N <= L <= 100
+
+Solution:
+```cpp
+class Solution {
+public:
+    int numMusicPlaylists(int N, int L, int K) {
+        
+    }
+};
+```
+
+## 718. Maximum Length of Repeated Subarray
+
+Given two integer arrays A and B, return the maximum length of an subarray that appears in both arrays.
+
+Example 1:
+```
+Input:
+A: [1,2,3,2,1]
+B: [3,2,1,4,7]
+Output: 3
+Explanation: 
+The repeated subarray with maximum length is [3, 2, 1].
+```
+ 
+
+Note:
+
+- 1 <= len(A), len(B) <= 1000
+- 0 <= A[i], B[i] < 100
+
+Solution:
+```cpp
+class Solution {
+public:
+    int findLength(vector<int>& A, vector<int>& B) {
+        
+    }
+};
+```
+
+## 847. Shortest Path Visiting All Nodes
+
+An undirected, connected graph of N nodes (labeled 0, 1, 2, ..., N-1) is given as graph.
+
+graph.length = N, and j != i is in the list graph[i] exactly once, if and only if nodes i and j are connected.
+
+Return the length of the shortest path that visits every node. You may start and stop at any node, you may revisit nodes multiple times, and you may reuse edges.
+
+ 
+
+Example 1:
+```
+Input: [[1,2,3],[0],[0],[0]]
+Output: 4
+Explanation: One possible path is [1,0,2,0,3]
+```
+Example 2:
+```
+Input: [[1],[0,2,4],[1,3,4],[2],[1,2]]
+Output: 4
+Explanation: One possible path is [0,1,4,2,3]
+```
+
+Note:
+
+- 1<= graph.length <= 12
+- 0 <= graph[i].length < graph.length
+
+Solution:
+```cpp
+class Solution {
+public:
+    int shortestPathLength(vector<vector<int>>& graph) {
+        
+    }
+};
+```
+
+## 1227. Airplane Seat Assignment Probability
+
+n passengers board an airplane with exactly n seats. The first passenger has lost the ticket and picks a seat randomly. But after that, the rest of passengers will:
+
+- Take their own seat if it is still available, 
+- Pick other seats randomly when they find their seat occupied 
+
+What is the probability that the n-th person can get his own seat?
+
+
+Example 1:
+```
+Input: n = 1
+Output: 1.00000
+Explanation: The first person can only get the first seat.
+```
+Example 2:
+```
+Input: n = 2
+Output: 0.50000
+Explanation: The second person has a probability of 0.5 to get the second
+seat (when first person gets the first seat).
+```
+ 
+
+Constraints:
+
+- 1 <= n <= 10^5
+
+Solution:
+```cpp
+class Solution {
+public:
+    double nthPersonGetsNthSeat(int n) {
+        
+    }
+};
+```
+
+## 466. Count The Repetitions
+
+Define S = [s,n] as the string S which consists of n connected strings s. For example, ["abc", 3] ="abcabcabc".
+
+On the other hand, we define that string s1 can be obtained from string s2 if we can remove some characters from s2 such that it becomes s1. For example, “abc” can be obtained from “abdbec” based on our definition, but it can not be obtained from “acbbe”.
+
+You are given two non-empty strings s1 and s2 (each at most 100 characters long) and two integers 0 ≤ n1 ≤ 106 and 1 ≤ n2 ≤ 106. Now consider the strings S1 and S2, where S1=[s1,n1] and S2=[s2,n2]. Find the maximum integer M such that [S2,M] can be obtained from S1.
+
+Example:
+```
+Input:
+s1="acb", n1=4
+s2="ab", n2=2
+
+Return:
+2
+```
+
+Solution:
+```cpp
+class Solution {
+public:
+    int getMaxRepetitions(string s1, int n1, string s2, int n2) {
+        
+    }
+};
+```
+
+## 983. Minimum Cost For Tickets
+
+In a country popular for train travel, you have planned some train travelling one year in advance.  The days of the year that you will travel is given as an array days.  Each day is an integer from 1 to 365.
+
+Train tickets are sold in 3 different ways:
+
+- a 1-day pass is sold for costs[0] dollars;
+- a 7-day pass is sold for costs[1] dollars;
+- a 30-day pass is sold for costs[2] dollars.
+
+The passes allow that many days of consecutive travel.  For example, if we get a 7-day pass on day 2, then we can travel for 7 days: day 2, 3, 4, 5, 6, 7, and 8.
+
+Return the minimum number of dollars you need to travel every day in the given list of days.
+
+ 
+
+Example 1:
+```
+Input: days = [1,4,6,7,8,20], costs = [2,7,15]
+Output: 11
+Explanation: 
+For example, here is one way to buy passes that lets you travel your travel plan:
+On day 1, you bought a 1-day pass for costs[0] = $2, which covered day 1.
+On day 3, you bought a 7-day pass for costs[1] = $7, which covered days 3, 4, ..., 9.
+On day 20, you bought a 1-day pass for costs[0] = $2, which covered day 20.
+In total you spent $11 and covered all the days of your travel.
+```
+Example 2:
+```
+Input: days = [1,2,3,4,5,6,7,8,9,10,30,31], costs = [2,7,15]
+Output: 17
+Explanation: 
+For example, here is one way to buy passes that lets you travel your travel plan:
+On day 1, you bought a 30-day pass for costs[2] = $15 which covered days 1, 2, ..., 30.
+On day 31, you bought a 1-day pass for costs[0] = $2 which covered day 31.
+In total you spent $17 and covered all the days of your travel.
+```
+
+
+
+Note:
+
+- 1 <= days.length <= 365
+- 1 <= days[i] <= 365
+- days is in strictly increasing order.
+- costs.length == 3
+- 1 <= costs[i] <= 1000
+
+Solution:
+```cpp
+class Solution {
+public:
+    int mincostTickets(vector<int>& days, vector<int>& costs) {
+        
+    }
+};
+```
