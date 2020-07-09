@@ -644,7 +644,7 @@ public:
 };
 ```
 
-41. First Missing Positive
+## 41. First Missing Positive
 
 Given an unsorted integer array, find the smallest missing positive integer.
 
