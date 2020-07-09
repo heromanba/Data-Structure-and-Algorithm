@@ -1303,3 +1303,637 @@ public:
     }
 };
 ```
+
+## 87. Scramble String
+
+Given a string s1, we may represent it as a binary tree by partitioning it to two non-empty substrings recursively.
+
+Below is one possible representation of s1 = "great":
+```
+    great
+   /    \
+  gr    eat
+ / \    /  \
+g   r  e   at
+           / \
+          a   t
+```          
+To scramble the string, we may choose any non-leaf node and swap its two children.
+
+For example, if we choose the node "gr" and swap its two children, it produces a scrambled string "rgeat".
+```
+    rgeat
+   /    \
+  rg    eat
+ / \    /  \
+r   g  e   at
+           / \
+          a   t
+```          
+We say that "rgeat" is a scrambled string of "great".
+
+Similarly, if we continue to swap the children of nodes "eat" and "at", it produces a scrambled string "rgtae".
+```
+    rgtae
+   /    \
+  rg    tae
+ / \    /  \
+r   g  ta  e
+       / \
+      t   a
+```      
+We say that "rgtae" is a scrambled string of "great".
+
+Given two strings s1 and s2 of the same length, determine if s2 is a scrambled string of s1.
+
+Example 1:
+```
+Input: s1 = "great", s2 = "rgeat"
+Output: true
+```
+Example 2:
+```
+Input: s1 = "abcde", s2 = "caebd"
+Output: false
+```
+
+Solution:
+```cpp
+class Solution {
+public:
+    bool isScramble(string s1, string s2) {
+        
+    }
+};
+```
+
+## 343. Integer Break
+
+Given a positive integer n, break it into the sum of at least two positive integers and maximize the product of those integers. Return the maximum product you can get.
+
+Example 1:
+```
+Input: 2
+Output: 1
+Explanation: 2 = 1 + 1, 1 × 1 = 1.
+```
+Example 2:
+```
+Input: 10
+Output: 36
+Explanation: 10 = 3 + 3 + 4, 3 × 3 × 4 = 36.
+```
+Note: You may assume that n is not less than 2 and not larger than 58.
+
+Solution:
+```cpp
+class Solution {
+public:
+    int integerBreak(int n) {
+        
+    }
+};
+```
+
+## 1240. Tiling a Rectangle with the Fewest Squares
+
+Given a rectangle of size n x m, find the minimum number of integer-sided squares that tile the rectangle.
+
+Example 1:
+
+![](https://assets.leetcode.com/uploads/2019/10/17/sample_11_1592.png)
+```
+Input: n = 2, m = 3
+Output: 3
+Explanation: 3 squares are necessary to cover the rectangle.
+2 (squares of 1x1)
+1 (square of 2x2)
+```
+Example 2:
+
+![](https://assets.leetcode.com/uploads/2019/10/17/sample_22_1592.png)
+```
+Input: n = 5, m = 8
+Output: 5
+```
+
+Example 3:
+
+![](https://assets.leetcode.com/uploads/2019/10/17/sample_33_1592.png)
+
+```
+Input: n = 11, m = 13
+Output: 6
+``` 
+
+Constraints:
+
+- 1 <= n <= 13
+- 1 <= m <= 13
+
+Solution:
+```cpp
+class Solution {
+public:
+    int tilingRectangle(int n, int m) {
+        
+    }
+};
+```
+
+## 264. Ugly Number II
+
+Write a program to find the n-th ugly number.
+
+Ugly numbers are positive numbers whose prime factors only include 2, 3, 5. 
+
+Example:
+```
+Input: n = 10
+Output: 12
+Explanation: 1, 2, 3, 4, 5, 6, 8, 9, 10, 12 is the sequence of the first 10 ugly numbers.
+```
+Note:  
+
+- 1 is typically treated as an ugly number.
+- n does not exceed 1690.
+
+Solution:
+```cpp
+class Solution {
+public:
+    int nthUglyNumber(int n) {
+        
+    }
+};
+```
+
+## 546. Remove Boxes
+
+Given several boxes with different colors represented by different positive numbers.
+You may experience several rounds to remove boxes until there is no box left. Each time you can choose some continuous boxes with the same color (composed of k boxes, k >= 1), remove them and get k*k points.
+Find the maximum points you can get.
+
+Example 1:
+```
+Input: boxes = [1,3,2,2,2,3,4,3,1]
+Output: 23
+Explanation:
+[1, 3, 2, 2, 2, 3, 4, 3, 1] 
+----> [1, 3, 3, 4, 3, 1] (3*3=9 points) 
+----> [1, 3, 3, 3, 1] (1*1=1 points) 
+----> [1, 1] (3*3=9 points) 
+----> [] (2*2=4 points)
+```
+
+Constraints:
+
+- 1 <= boxes.length <= 100
+- 1 <= boxes[i] <= 100
+
+Solution:
+```cpp
+class Solution {
+public:
+    int removeBoxes(vector<int>& boxes) {
+        
+    }
+};
+```
+
+## 300. Longest Increasing Subsequence
+
+Given an unsorted array of integers, find the length of longest increasing subsequence.
+
+Example:
+```
+Input: [10,9,2,5,3,7,101,18]
+Output: 4 
+Explanation: The longest increasing subsequence is [2,3,7,101], 
+therefore the length is 4. 
+```
+Note:
+
+- There may be more than one LIS combination, it is only necessary for you to return the length.
+- Your algorithm should run in O(n2) complexity.
+
+Follow up: Could you improve it to O(n log n) time complexity?
+
+Solution:
+```cpp
+class Solution {
+public:
+    int lengthOfLIS(vector<int>& nums) {
+        
+    }
+};
+```
+
+## 363. Max Sum of Rectangle No Larger Than K
+
+Given a non-empty 2D matrix matrix and an integer k, find the max sum of a rectangle in the matrix such that its sum is no larger than k.
+
+Example:
+```
+Input: matrix = [[1,0,1],[0,-2,3]], k = 2
+Output: 2 
+Explanation: Because the sum of rectangle [[0, 1], [-2, 3]] is 2,
+             and 2 is the max number no larger than k (k = 2).
+```             
+Note:
+
+- The rectangle inside the matrix must have an area > 0.
+- What if the number of rows is much larger than the number of columns?
+
+Solution:
+```cpp
+class Solution {
+public:
+    int maxSumSubmatrix(vector<vector<int>>& matrix, int k) {
+        
+    }
+};
+```
+
+## 730. Count Different Palindromic Subsequences
+
+Given a string S, find the number of different non-empty palindromic subsequences in S, and return that number modulo 10^9 + 7.
+
+A subsequence of a string S is obtained by deleting 0 or more characters from S.
+
+A sequence is palindromic if it is equal to the sequence reversed.
+
+Two sequences A_1, A_2, ... and B_1, B_2, ... are different if there is some i for which A_i != B_i.
+
+Example 1:
+```
+Input: 
+S = 'bccb'
+Output: 6
+Explanation: 
+The 6 different non-empty palindromic subsequences
+are 'b', 'c', 'bb', 'cc', 'bcb', 'bccb'.
+
+Note that 'bcb' is counted only once, even though 
+it occurs twice.
+```
+
+Example 2:
+```
+Input: 
+S = 
+
+'abcdabcdabcdabcdabcdabcdabcdabcddcbadcbadcbadcbadcbadcbadcbadcba'
+
+Output: 104860361
+Explanation: 
+There are 3104860382 different non-empty palindromic subsequences, 
+which is 104860361 modulo 10^9 + 7.
+```
+Note:
+
+- The length of S will be in the range [1, 1000].
+- Each character S[i] will be in the set {'a', 'b', 'c', 'd'}.
+
+Solution:
+```cpp
+class Solution {
+public:
+    int countPalindromicSubsequences(string S) {
+        
+    }
+};
+```
+
+## 698. Partition to K Equal Sum Subsets
+
+Given an array of integers nums and a positive integer k, find whether it's possible to divide this array into k non-empty subsets whose sums are all equal.
+
+Example 1:
+```
+Input: nums = [4, 3, 2, 3, 5, 2, 1], k = 4
+Output: True
+Explanation: It's possible to divide it into 4 subsets (5), 
+(1, 4), (2,3), (2,3) with equal sums.
+``` 
+
+Note:
+
+- 1 <= k <= len(nums) <= 16.
+- 0 < nums[i] < 10000.
+
+Solution:
+```cpp
+class Solution {
+public:
+    bool canPartitionKSubsets(vector<int>& nums, int k) {
+        
+    }
+};
+```
+
+## 877. Stone Game
+
+Alex and Lee play a game with piles of stones.  There are an even number of piles arranged in a row, and each pile has a positive integer number of stones piles[i].
+
+The objective of the game is to end with the most stones.  The total number of stones is odd, so there are no ties.
+
+Alex and Lee take turns, with Alex starting first.  Each turn, a player takes the entire pile of stones from either the beginning or the end of the row.  This continues until there are no more piles left, at which point the person with the most stones wins.
+
+Assuming Alex and Lee play optimally, return True if and only if Alex wins the game.
+
+ 
+
+Example 1:
+```
+Input: [5,3,4,5]
+Output: true
+Explanation: 
+Alex starts first, and can only take the first 5 or the last 5.
+Say he takes the first 5, so that the row becomes [3, 4, 5].
+If Lee takes 3, then the board is [4, 5], and Alex takes 5 to win with 10 points.
+If Lee takes the last 5, then the board is [3, 4], and Alex takes 4 to win with 9 points.
+This demonstrated that taking the first 5 was a winning move for Alex, so we return true.
+```
+
+Note:
+
+- 2 <= piles.length <= 500
+- piles.length is even.
+- 1 <= piles[i] <= 500
+- sum(piles) is odd.
+
+Solution:
+```cpp
+class Solution {
+public:
+    bool stoneGame(vector<int>& piles) {
+        
+    }
+};
+```
+
+## 746. Min Cost Climbing Stairs
+
+On a staircase, the i-th step has some non-negative cost cost[i] assigned (0 indexed).
+
+Once you pay the cost, you can either climb one or two steps. You need to find minimum cost to reach the top of the floor, and you can either start from the step with index 0, or the step with index 1.
+
+Example 1:
+```
+Input: cost = [10, 15, 20]
+Output: 15
+Explanation: Cheapest is start on cost[1], pay that cost and go to the top.
+```
+Example 2:
+```
+Input: cost = [1, 100, 1, 1, 1, 100, 1, 1, 100, 1]
+Output: 6
+Explanation: Cheapest is start on cost[0], and only step on 1s, skipping cost[3].
+```
+Note:
+- cost will have a length in the range [2, 1000].
+- Every cost[i] will be an integer in the range [0, 999].
+
+Solution:
+```cpp
+class Solution {
+public:
+    int minCostClimbingStairs(vector<int>& cost) {
+        
+    }
+};
+```
+
+## 741. Cherry Pickup
+
+In a N x N grid representing a field of cherries, each cell is one of three possible integers.
+
+- 0 means the cell is empty, so you can pass through;
+- 1 means the cell contains a cherry, that you can pick up and pass through;
+- -1 means the cell contains a thorn that blocks your way.
+ 
+Your task is to collect maximum number of cherries possible by following the rules below:
+
+- Starting at the position (0, 0) and reaching (N-1, N-1) by moving right or down through valid path cells (cells with value 0 or 1);
+- After reaching (N-1, N-1), returning to (0, 0) by moving left or up through valid path cells;
+- When passing through a path cell containing a cherry, you pick it up and the cell becomes an empty cell (0);
+- If there is no valid path between (0, 0) and (N-1, N-1), then no cherries can be collected.
+ 
+Example 1:
+```
+Input: grid =
+[[0, 1, -1],
+ [1, 0, -1],
+ [1, 1,  1]]
+Output: 5
+
+Explanation: 
+The player started at (0, 0) and went down, down, right right 
+to reach (2, 2).
+4 cherries were picked up during this single trip, and the 
+matrix becomes [[0,1,-1],[0,0,-1],[0,0,0]].
+Then, the player went left, up, up, left to return home,
+picking up one more cherry.
+The total number of cherries picked up is 5, and this is 
+the maximum possible.
+```
+
+Note:
+
+- grid is an N by N 2D array, with 1 <= N <= 50.
+- Each grid[i][j] is an integer in the set {-1, 0, 1}.
+- It is guaranteed that grid[0][0] and grid[N-1][N-1] are not -1.
+ 
+ Solution:
+ ```cpp
+ class Solution {
+public:
+    int cherryPickup(vector<vector<int>>& grid) {
+        
+    }
+};
+ ```
+ 
+## 516. Longest Palindromic Subsequence
+
+Given a string s, find the longest palindromic subsequence's length in s. You may assume that the maximum length of s is 1000.
+
+Example 1:
+```
+Input:
+
+"bbbab"
+```
+Output:
+```
+4
+```
+One possible longest palindromic subsequence is "bbbb".
+ 
+
+Example 2:
+Input:
+```
+"cbbd"
+```
+Output:
+```
+2
+```
+One possible longest palindromic subsequence is "bb".
+ 
+
+Constraints:
+
+- 1 <= s.length <= 1000
+- s consists only of lowercase English letters.
+
+Solution:
+```cpp
+class Solution {
+public:
+    int longestPalindromeSubseq(string s) {
+        
+    }
+};
+```
+
+## 354. Russian Doll Envelopes
+
+You have a number of envelopes with widths and heights given as a pair of integers (w, h). One envelope can fit into another if and only if both the width and height of one envelope is greater than the width and height of the other envelope.
+
+What is the maximum number of envelopes can you Russian doll? (put one inside other)
+
+Note:
+Rotation is not allowed.
+
+Example:
+```
+Input: [[5,4],[6,4],[6,7],[2,3]]
+Output: 3 
+Explanation: The maximum number of envelopes you can 
+Russian doll is 3 ([2,3] => [5,4] => [6,7]).
+```
+
+Solution:
+```cpp
+class Solution {
+public:
+    int maxEnvelopes(vector<vector<int>>& envelopes) {
+        
+    }
+};
+```
+
+## 1074. Number of Submatrices That Sum to Target
+
+Given a matrix, and a target, return the number of non-empty submatrices that sum to target.
+
+A submatrix x1, y1, x2, y2 is the set of all cells matrix[x][y] with x1 <= x <= x2 and y1 <= y <= y2.
+
+Two submatrices (x1, y1, x2, y2) and (x1', y1', x2', y2') are different if they have some coordinate that is different: for example, if x1 != x1'.
+
+ 
+
+Example 1:
+```
+Input: matrix = [[0,1,0],[1,1,1],[0,1,0]], target = 0
+Output: 4
+Explanation: The four 1x1 submatrices that only contain 0.
+```
+Example 2:
+```
+Input: matrix = [[1,-1],[-1,1]], target = 0
+Output: 5
+Explanation: The two 1x2 submatrices, plus the two 2x1 submatrices, 
+plus the 2x2 submatrix.
+``` 
+
+Note:
+
+- 1 <= matrix.length <= 300
+- 1 <= matrix[0].length <= 300
+- -1000 <= matrix[i] <= 1000
+- -10^8 <= target <= 10^8
+
+Solution:
+```cpp
+class Solution {
+public:
+    int numSubmatrixSumTarget(vector<vector<int>>& matrix, int target) {
+        
+    }
+};
+```
+
+## 44. Wildcard Matching
+
+Given an input string (s) and a pattern (p), implement wildcard pattern matching with support for '?' and '*'.
+
+```
+'?' Matches any single character.
+'*' Matches any sequence of characters (including the empty sequence).
+```
+
+The matching should cover the entire input string (not partial).
+
+Note:
+
+- s could be empty and contains only lowercase letters a-z.
+- p could be empty and contains only lowercase letters a-z, and characters like ? or *.
+
+Example 1:
+```
+Input:
+s = "aa"
+p = "a"
+Output: false
+Explanation: "a" does not match the entire string "aa".
+```
+Example 2:
+```
+Input:
+s = "aa"
+p = "*"
+Output: true
+Explanation: '*' matches any sequence.
+```
+Example 3:
+```
+Input:
+s = "cb"
+p = "?a"
+Output: false
+Explanation: '?' matches 'c', but the second letter is 'a', 
+which does not match 'b'.
+```
+Example 4:
+```
+Input:
+s = "adceb"
+p = "*a*b"
+Output: true
+Explanation: The first '*' matches the empty sequence, while the second '*' 
+matches the substring "dce".
+```
+
+Example 5:
+```
+Input:
+s = "acdcb"
+p = "a*c?b"
+Output: false
+```
+
+Solution:
+
+```cpp
+
+class Solution {
+public:
+    bool isMatch(string s, string p) {
+        
+    }
+};
+```
