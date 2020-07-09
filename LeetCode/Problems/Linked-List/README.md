@@ -1,4 +1,4 @@
-# Linked List
+# Linked List (Easy + Medium)
 
 ## 206.Reverse Linked List
 
