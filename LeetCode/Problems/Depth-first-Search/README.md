@@ -3556,3 +3556,270 @@ public:
     }
 };
 ```
+
+
+## 129. Sum Root to Leaf Numbers
+
+Given a binary tree containing digits from 0-9 only, each root-to-leaf path could represent a number.
+
+An example is the root-to-leaf path 1->2->3 which represents the number 123.
+
+Find the total sum of all root-to-leaf numbers.
+
+Note: A leaf is a node with no children.
+
+Example:
+```
+Input: [1,2,3]
+    1
+   / \
+  2   3
+Output: 25
+Explanation:
+The root-to-leaf path 1->2 represents the number 12.
+The root-to-leaf path 1->3 represents the number 13.
+Therefore, sum = 12 + 13 = 25.
+```
+Example 2:
+```
+Input: [4,9,0,5,1]
+    4
+   / \
+  9   0
+ / \
+5   1
+Output: 1026
+Explanation:
+The root-to-leaf path 4->9->5 represents the number 495.
+The root-to-leaf path 4->9->1 represents the number 491.
+The root-to-leaf path 4->0 represents the number 40.
+Therefore, sum = 495 + 491 + 40 = 1026.
+```
+
+Solution:
+```cpp
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
+public:
+    int sumNumbers(TreeNode* root) {
+        
+    }
+};
+```
+
+## 785. Is Graph Bipartite?
+
+Given an undirected graph, return true if and only if it is bipartite.
+
+Recall that a graph is bipartite if we can split it's set of nodes into two independent subsets A and B such that every edge in the graph has one node in A and another node in B.
+
+The graph is given in the following form: graph[i] is a list of indexes j for which the edge between nodes i and j exists.  Each node is an integer between 0 and graph.length - 1.  There are no self edges or parallel edges: graph[i] does not contain i, and it doesn't contain any element twice.
+```
+Example 1:
+Input: [[1,3], [0,2], [1,3], [0,2]]
+Output: true
+Explanation: 
+The graph looks like this:
+0----1
+|    |
+|    |
+3----2
+We can divide the vertices into two groups: {0, 2} and {1, 3}.
+```
+```
+Example 2:
+Input: [[1,2,3], [0,2], [0,1,3], [0,2]]
+Output: false
+Explanation: 
+The graph looks like this:
+0----1
+| \  |
+|  \ |
+3----2
+We cannot find a way to divide the set of nodes into two independent subsets.
+ ```
+
+Note:
+
+- graph will have length in range [1, 100].
+- graph[i] will contain integers in range [0, graph.length - 1].
+- graph[i] will not contain i or duplicate values.
+- The graph is undirected: if any element j is in graph[i], then i will be in graph[j].
+
+Solution:
+```cpp
+class Solution {
+public:
+    bool isBipartite(vector<vector<int>>& graph) {
+        
+    }
+};
+```
+
+## 1145. Binary Tree Coloring Game
+
+
+Two players play a turn based game on a binary tree.  We are given the root of this binary tree, and the number of nodes n in the tree.  n is odd, and each node has a distinct value from 1 to n.
+
+Initially, the first player names a value x with 1 <= x <= n, and the second player names a value y with 1 <= y <= n and y != x.  The first player colors the node with value x red, and the second player colors the node with value y blue.
+
+Then, the players take turns starting with the first player.  In each turn, that player chooses a node of their color (red if player 1, blue if player 2) and colors an uncolored neighbor of the chosen node (either the left child, right child, or parent of the chosen node.)
+
+If (and only if) a player cannot choose such a node in this way, they must pass their turn.  If both players pass their turn, the game ends, and the winner is the player that colored more nodes.
+
+You are the second player.  If it is possible to choose such a y to ensure you win the game, return true.  If it is not possible, return false.
+
+ 
+
+Example 1:
+
+![](https://assets.leetcode.com/uploads/2019/08/01/1480-binary-tree-coloring-game.png)
+
+```
+Input: root = [1,2,3,4,5,6,7,8,9,10,11], n = 11, x = 3
+Output: true
+Explanation: The second player can choose the node with value 2.
+ ```
+
+Constraints:
+
+- root is the root of a binary tree with n nodes and distinct node values from 1 to n.
+- n is odd.
+- 1 <= x <= n <= 100
+
+
+## 559. Maximum Depth of N-ary Tree
+
+Given a n-ary tree, find its maximum depth.
+
+The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
+
+Nary-Tree input serialization is represented in their level order traversal, each group of children is separated by the null value (See examples).
+
+ 
+
+Example 1:
+
+![](https://assets.leetcode.com/uploads/2018/10/12/narytreeexample.png)
+```
+Input: root = [1,null,3,2,4,null,5,6]
+Output: 3
+```
+Example 2:
+
+![](https://assets.leetcode.com/uploads/2019/11/08/sample_4_964.png)
+```
+Input: root = [1,null,2,3,4,5,null,null,6,7,null,8,null,
+9,10,null,null,11,null,12,null,13,null,null,14]
+
+Output: 5
+ ```
+
+Constraints:
+
+- The depth of the n-ary tree is less than or equal to 1000.
+- The total number of nodes is between [0, 10^4].
+
+Solution:
+```cpp
+/*
+// Definition for a Node.
+class Node {
+public:
+    int val;
+    vector<Node*> children;
+
+    Node() {}
+
+    Node(int _val) {
+        val = _val;
+    }
+
+    Node(int _val, vector<Node*> _children) {
+        val = _val;
+        children = _children;
+    }
+};
+*/
+
+class Solution {
+public:
+    int maxDepth(Node* root) {
+        
+    }
+};
+```
+
+## 802. Find Eventual Safe States
+
+In a directed graph, we start at some node and every turn, walk along a directed edge of the graph.  If we reach a node that is terminal (that is, it has no outgoing directed edges), we stop.
+
+Now, say our starting node is eventually safe if and only if we must eventually walk to a terminal node.  More specifically, there exists a natural number K so that for any choice of where to walk, we must have stopped at a terminal node in less than K steps.
+
+Which nodes are eventually safe?  Return them as an array in sorted order.
+
+The directed graph has N nodes with labels 0, 1, ..., N-1, where N is the length of graph.  The graph is given in the following form: graph[i] is a list of labels j such that (i, j) is a directed edge of the graph.
+
+```
+Example:
+Input: graph = [[1,2],[2,3],[5],[0],[5],[],[]]
+Output: [2,4,5,6]
+Here is a diagram of the above graph.
+```
+
+![](https://s3-lc-upload.s3.amazonaws.com/uploads/2018/03/17/picture1.png)
+
+Note:
+
+- graph will have length at most 10000.
+- The number of edges in the graph will not exceed 32000.
+- Each graph[i] will be a sorted list of different integers, chosen within the range [0, graph.length - 1].
+
+Solution:
+```cpp
+class Solution {
+public:
+    vector<int> eventualSafeNodes(vector<vector<int>>& graph) {
+        
+    }
+};
+```
+
+## 491. Increasing Subsequences
+
+Given an integer array, your task is to find all the different possible increasing subsequences of the given array, and the length of an increasing subsequence should be at least 2.
+
+ 
+```
+Example:
+
+Input: [4, 6, 7, 7]
+Output: [[4, 6], [4, 7], [4, 6, 7], [4, 6, 7, 7], [6, 7], [6, 7, 7], [7,7], [4,7,7]]
+``` 
+
+Constraints:
+
+- The length of the given array will not exceed 15.
+- The range of integer in the given array is [-100,100].
+- The given array may contain duplicates, and two equal integers should also be considered as a special case of increasing sequence.
+
+Solution:
+```cpp
+class Solution {
+public:
+    vector<vector<int>> findSubsequences(vector<int>& nums) {
+        
+    }
+};
+```
+
