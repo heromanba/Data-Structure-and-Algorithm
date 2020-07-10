@@ -890,3 +890,171 @@ public:
     }
 };
 ```
+
+## 1235. Maximum Profit in Job Scheduling
+
+We have n jobs, where every job is scheduled to be done from startTime[i] to endTime[i], obtaining a profit of profit[i].
+
+You're given the startTime , endTime and profit arrays, you need to output the maximum profit you can take such that there are no 2 jobs in the subset with overlapping time range.
+
+If you choose a job that ends at time X you will be able to start another job that starts at time X.
+
+ 
+
+Example 1:
+
+![](https://assets.leetcode.com/uploads/2019/10/10/sample1_1584.png)
+
+```
+Input: startTime = [1,2,3,3], endTime = [3,4,5,6], profit = [50,10,40,70]
+Output: 120
+Explanation: The subset chosen is the first and fourth job. 
+Time range [1-3]+[3-6] , we get profit of 120 = 50 + 70.
+```
+
+Example 2:
+
+![](https://assets.leetcode.com/uploads/2019/10/10/sample22_1584.png)
+
+```
+Input: startTime = [1,2,3,4,6], endTime = [3,5,10,6,9], 
+profit = [20,20,100,70,60]
+
+Output: 150
+
+Explanation: The subset chosen is the first, fourth and fifth job. 
+Profit obtained 150 = 20 + 70 + 60.
+```
+Example 3:
+
+![](https://assets.leetcode.com/uploads/2019/10/10/sample3_1584.png)
+
+```
+Input: startTime = [1,1,1], endTime = [2,3,4], profit = [5,6,4]
+Output: 6
+```
+
+Constraints:
+
+- 1 <= startTime.length == endTime.length == profit.length <= 5 * 10^4
+- 1 <= startTime[i] < endTime[i] <= 10^9
+- 1 <= profit[i] <= 10^4
+
+Solution:
+```cpp
+class Solution {
+public:
+    int jobScheduling(vector<int>& startTime, vector<int>& endTime, vector<int>& profit) {
+        
+    }
+};
+```
+
+## 1086. High Five
+
+Given a list of scores of different students, return the average score of each student's top five scores in the order of each student's id.
+
+Each entry items[i] has items[i][0] the student's id, and items[i][1] the student's score.  The average score is calculated using integer division.
+
+ 
+
+Example 1:
+```
+Input: [
+    [1,91],[1,92],[2,93],[2,97],[1,60],[2,77],
+    [1,65],[1,87],[1,100],[2,100],[2,76]
+]
+
+Output: [[1,87],[2,88]]
+Explanation: 
+The average of the student with id = 1 is 87.
+The average of the student with id = 2 is 88.6. But with integer 
+division their average converts to 88.
+``` 
+
+Note:
+
+- 1 <= items.length <= 1000
+- items[i].length == 2
+- The IDs of the students is between 1 to 1000
+- The score of the students is between 1 to 100
+- For each student, there are at least 5 scores
+
+Solution:
+```cpp
+class Solution {
+public:
+    vector<vector<int>> highFive(vector<vector<int>>& items) {
+        
+    }
+};
+```
+
+## 922. Sort Array By Parity II
+
+Given an array A of non-negative integers, half of the integers in A are odd, and half of the integers are even.
+
+Sort the array so that whenever A[i] is odd, i is odd; and whenever A[i] is even, i is even.
+
+You may return any answer array that satisfies this condition.
+
+ 
+
+Example 1:
+```
+Input: [4,2,5,7]
+Output: [4,5,2,7]
+Explanation: [4,7,2,5], [2,5,4,7], [2,7,4,5] would also have been accepted.
+```
+
+Note:
+
+- 2 <= A.length <= 20000
+- A.length % 2 == 0
+- 0 <= A[i] <= 1000
+
+Solution:
+```cpp
+class Solution {
+public:
+    vector<int> sortArrayByParityII(vector<int>& A) {
+        
+    }
+};
+```
+
+## 524. Longest Word in Dictionary through Deleting
+
+Given a string and a string dictionary, find the longest string in the dictionary that can be formed by deleting some characters of the given string. If there are more than one possible results, return the longest word with the smallest lexicographical order. If there is no possible result, return the empty string.
+
+Example 1:
+```
+Input:
+s = "abpcplea", d = ["ale","apple","monkey","plea"]
+
+Output: 
+"apple"
+```
+
+Example 2:
+```
+Input:
+s = "abpcplea", d = ["a","b","c"]
+
+Output: 
+"a"
+```
+Note:
+- All the strings in the input will only contain lower-case letters.
+- The size of the dictionary won't exceed 1,000.
+- The length of all the strings in the input won't exceed 1,000.
+
+Solution:
+```cpp
+class Solution {
+public:
+    string findLongestWord(string s, vector<string>& d) {
+        
+    }
+};
+```
