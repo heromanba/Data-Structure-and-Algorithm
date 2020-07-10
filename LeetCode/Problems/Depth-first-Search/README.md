@@ -382,3 +382,372 @@ Note:
 
 - 1<= N <= 100
 - 0 <= node.val <= N
+
+Solution:
+
+```cpp
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
+public:
+    int distributeCoins(TreeNode* root) {
+        
+    }
+};
+```
+
+## 959. Regions Cut By Slashes
+
+In a N x N grid composed of 1 x 1 squares, each 1 x 1 square consists of a /, \, or blank space.  These characters divide the square into contiguous regions.
+
+(Note that backslash characters are escaped, so a \ is represented as "\\".)
+
+Return the number of regions.
+
+ 
+
+Example 1:
+```
+Input:
+[
+  " /",
+  "/ "
+]
+Output: 2
+Explanation: The 2x2 grid is as follows:
+```
+
+![](https://assets.leetcode.com/uploads/2018/12/15/1.png)
+
+Example 2:
+```
+Input:
+[
+  " /",
+  "  "
+]
+Output: 1
+Explanation: The 2x2 grid is as follows:
+```
+![](https://assets.leetcode.com/uploads/2018/12/15/2.png)
+
+Example 3:
+```
+Input:
+[
+  "\\/",
+  "/\\"
+]
+Output: 4
+Explanation: (Recall that because \ characters are escaped, "\\/" refers to \/, 
+and "/\\" refers to /\.)
+The 2x2 grid is as follows:
+```
+![](https://assets.leetcode.com/uploads/2018/12/15/3.png)
+
+Example 4:
+```
+Input:
+[
+  "/\\",
+  "\\/"
+]
+Output: 5
+Explanation: (Recall that because \ characters are escaped, "/\\" refers to /\, 
+and "\\/" refers to \/.)
+The 2x2 grid is as follows:
+```
+![](https://assets.leetcode.com/uploads/2018/12/15/4.png)
+
+Example 5:
+```
+Input:
+[
+  "//",
+  "/ "
+]
+Output: 3
+Explanation: The 2x2 grid is as follows:
+```
+![](https://assets.leetcode.com/uploads/2018/12/15/5.png)
+
+Note:
+
+- 1 <= grid.length == grid[0].length <= 30
+- grid[i][j] is either '/', '\', or ' '.
+
+Solution:
+```cpp
+class Solution {
+public:
+    int regionsBySlashes(vector<string>& grid) {
+        
+    }
+};
+```
+
+## 695. Max Area of Island
+
+Given a non-empty 2D array grid of 0's and 1's, an island is a group of 1's (representing land) connected 4-directionally (horizontal or vertical.) You may assume all four edges of the grid are surrounded by water.
+
+Find the maximum area of an island in the given 2D array. (If there is no island, the maximum area is 0.)
+
+Example 1:
+```
+[[0,0,1,0,0,0,0,1,0,0,0,0,0],
+ [0,0,0,0,0,0,0,1,1,1,0,0,0],
+ [0,1,1,0,1,0,0,0,0,0,0,0,0],
+ [0,1,0,0,1,1,0,0,1,0,1,0,0],
+ [0,1,0,0,1,1,0,0,1,1,1,0,0],
+ [0,0,0,0,0,0,0,0,0,0,1,0,0],
+ [0,0,0,0,0,0,0,1,1,1,0,0,0],
+ [0,0,0,0,0,0,0,1,1,0,0,0,0]]
+```
+Given the above grid, return 6. Note the answer is not 11, 
+because the island must be connected 4-directionally.
+
+Example 2:
+
+```
+[[0,0,0,0,0,0,0,0]]
+
+```
+
+Given the above grid, return 0.
+
+Note: The length of each dimension in the given grid does not exceed 50.
+
+Solution:
+```cpp
+class Solution {
+public:
+    int maxAreaOfIsland(vector<vector<int>>& grid) {
+        
+    }
+};
+```
+
+## 124. Binary Tree Maximum Path Sum
+
+Given a non-empty binary tree, find the maximum path sum.
+
+For this problem, a path is defined as any sequence of nodes from some starting node to any node in the tree along the parent-child connections. The path must contain at least one node and does not need to go through the root.
+
+Example 1:
+```
+Input: [1,2,3]
+
+       1
+      / \
+     2   3
+
+Output: 6
+```
+Example 2:
+```
+Input: [-10,9,20,null,null,15,7]
+
+   -10
+   / \
+  9  20
+    /  \
+   15   7
+
+Output: 42
+```
+
+Solution:
+```cpp
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
+public:
+    int maxPathSum(TreeNode* root) {
+        
+    }
+};
+```
+
+# 199. Binary Tree Right Side View
+
+Given a binary tree, imagine yourself standing on the right side of it, return the values of the nodes you can see ordered from top to bottom.
+
+Example:
+```
+Input: [1,2,3,null,5,null,4]
+Output: [1, 3, 4]
+Explanation:
+
+   1            <---
+ /   \
+2     3         <---
+ \     \
+  5     4       <---
+```
+
+Solution:
+```cpp
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
+public:
+    vector<int> rightSideView(TreeNode* root) {
+        
+    }
+};
+```
+
+## 99. Recover Binary Search Tree
+
+Two elements of a binary search tree (BST) are swapped by mistake.
+
+Recover the tree without changing its structure.
+
+Example 1:
+```
+Input: [1,3,null,null,2]
+
+   1
+  /
+ 3
+  \
+   2
+
+Output: [3,1,null,null,2]
+
+   3
+  /
+ 1
+  \
+   2
+```   
+Example 2:
+```
+Input: [3,1,4,null,null,2]
+
+  3
+ / \
+1   4
+   /
+  2
+
+Output: [2,1,4,null,null,3]
+
+  2
+ / \
+1   4
+   /
+  3
+```  
+Follow up:
+
+- A solution using O(n) space is pretty straight forward.
+- Could you devise a constant space solution?
+
+Solution:
+```cpp
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
+public:
+    void recoverTree(TreeNode* root) {
+        
+    }
+};
+```
+
+## 110. Balanced Binary Tree
+
+Given a binary tree, determine if it is height-balanced.
+
+For this problem, a height-balanced binary tree is defined as:
+
+a binary tree in which the left and right subtrees of every node differ in height by no more than 1.
+
+ 
+
+Example 1:
+
+Given the following tree [3,9,20,null,null,15,7]:
+```
+    3
+   / \
+  9  20
+    /  \
+   15   7
+Return true.
+```
+
+Example 2:
+
+```
+Given the following tree [1,2,2,3,3,null,null,4,4]:
+
+       1
+      / \
+     2   2
+    / \
+   3   3
+  / \
+ 4   4
+Return false.
+```
+
+Solution:
+
+```cpp
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
+public:
+    bool isBalanced(TreeNode* root) {
+        
+    }
+};
+```
+
