@@ -1688,3 +1688,501 @@ Output:
   "do                  "
 ]
 ```
+
+Solution:
+```cpp
+class Solution {
+public:
+    vector<string> fullJustify(vector<string>& words, int maxWidth) {
+        
+    }
+};
+```
+
+## 387. First Unique Character in a String
+
+Given a string, find the first non-repeating character in it and return its index. If it doesn't exist, return -1.
+
+Examples:
+```
+s = "leetcode"
+return 0.
+
+s = "loveleetcode"
+return 2.
+``` 
+
+Note: You may assume the string contains only lowercase English letters.
+
+Solution:
+```cpp
+class Solution {
+public:
+    int firstUniqChar(string s) {
+        
+    }
+};
+```
+
+## 87. Scramble String
+
+Given a string s1, we may represent it as a binary tree by partitioning it to two non-empty substrings recursively.
+
+Below is one possible representation of s1 = "great":
+```
+    great
+   /    \
+  gr    eat
+ / \    /  \
+g   r  e   at
+           / \
+          a   t
+```          
+To scramble the string, we may choose any non-leaf node and swap its two children.
+
+For example, if we choose the node "gr" and swap its two children, it produces a scrambled string "rgeat".
+```
+    rgeat
+   /    \
+  rg    eat
+ / \    /  \
+r   g  e   at
+           / \
+          a   t
+```          
+We say that "rgeat" is a scrambled string of "great".
+
+Similarly, if we continue to swap the children of nodes "eat" and "at", it produces a scrambled string "rgtae".
+```
+    rgtae
+   /    \
+  rg    tae
+ / \    /  \
+r   g  ta  e
+       / \
+      t   a
+```      
+We say that "rgtae" is a scrambled string of "great".
+
+Given two strings s1 and s2 of the same length, determine if s2 is a scrambled string of s1.
+
+Example 1:
+```
+Input: s1 = "great", s2 = "rgeat"
+Output: true
+```
+Example 2:
+```
+Input: s1 = "abcde", s2 = "caebd"
+Output: false
+```
+
+Solution:
+```cpp
+class Solution {
+public:
+    bool isScramble(string s1, string s2) {
+        
+    }
+};
+```
+
+## 71. Simplify Path
+
+Given an absolute path for a file (Unix-style), simplify it. Or in other words, convert it to the canonical path.
+
+In a UNIX-style file system, a period . refers to the current directory. Furthermore, a double period .. moves the directory up a level.
+
+Note that the returned canonical path must always begin with a slash /, and there must be only a single slash / between two directory names. The last directory name (if it exists) must not end with a trailing /. Also, the canonical path must be the shortest string representing the absolute path.
+
+ 
+
+Example 1:
+```
+Input: "/home/"
+Output: "/home"
+Explanation: Note that there is no trailing slash after the last directory name.
+```
+Example 2:
+```
+Input: "/../"
+Output: "/"
+Explanation: Going one level up from the root directory is a no-op, as the root 
+level is the highest level you can go.
+```
+Example 3:
+```
+Input: "/home//foo/"
+Output: "/home/foo"
+Explanation: In the canonical path, multiple consecutive slashes are replaced by a single one.
+```
+Example 4:
+```
+Input: "/a/./b/../../c/"
+Output: "/c"
+```
+Example 5:
+```
+Input: "/a/../../b/../c//.//"
+Output: "/c"
+```
+Example 6:
+```
+Input: "/a//b////c/d//././/.."
+Output: "/a/b/c"
+```
+
+Solution:
+```cpp
+class Solution {
+public:
+    string simplifyPath(string path) {
+        
+    }
+};
+```
+
+## 730. Count Different Palindromic Subsequences
+
+Given a string S, find the number of different non-empty palindromic subsequences in S, and return that number modulo 10^9 + 7.
+
+A subsequence of a string S is obtained by deleting 0 or more characters from S.
+
+A sequence is palindromic if it is equal to the sequence reversed.
+
+Two sequences A_1, A_2, ... and B_1, B_2, ... are different if there is some i for which A_i != B_i.
+
+Example 1:
+```
+Input: 
+S = 'bccb'
+Output: 6
+Explanation: 
+The 6 different non-empty palindromic subsequences are 'b', 'c', 'bb', 
+'cc', 'bcb', 'bccb'.
+Note that 'bcb' is counted only once, even though it occurs twice.
+```
+Example 2:
+```
+Input: 
+S = 'abcdabcdabcdabcdabcdabcdabcdabcddcbadcbadcbadcbadcbadcbadcbadcba'
+Output: 104860361
+Explanation: 
+There are 3104860382 different non-empty palindromic subsequences, 
+which is 104860361 modulo 10^9 + 7.
+```
+Note:
+
+- The length of S will be in the range [1, 1000].
+- Each character S[i] will be in the set {'a', 'b', 'c', 'd'}.
+
+Solution:
+```cpp
+class Solution {
+public:
+    int countPalindromicSubsequences(string S) {
+        
+    }
+};
+```
+
+## 165. Compare Version Numbers
+
+Compare two version numbers version1 and version2.
+If version1 > version2 return 1; if version1 < version2 return -1;otherwise return 0.
+
+You may assume that the version strings are non-empty and contain only digits and the . character.
+
+The . character does not represent a decimal point and is used to separate number sequences.
+
+For instance, 2.5 is not "two and a half" or "half way to version three", it is the fifth second-level revision of the second first-level revision.
+
+You may assume the default revision number for each level of a version number to be 0. For example, version number 3.4 has a revision number of 3 and 4 for its first and second level revision number. Its third and fourth level revision number are both 0.
+
+ 
+
+Example 1:
+```
+Input: version1 = "0.1", version2 = "1.1"
+Output: -1
+```
+Example 2:
+```
+Input: version1 = "1.0.1", version2 = "1"
+Output: 1
+```
+Example 3:
+
+```
+Input: version1 = "7.5.2.4", version2 = "7.5.3"
+Output: -1
+```
+Example 4:
+
+```
+Input: version1 = "1.01", version2 = "1.001"
+Output: 0
+Explanation: Ignoring leading zeroes, both “01” and “001" represent the same number “1”
+```
+Example 5:
+
+```
+Input: version1 = "1.0", version2 = "1.0.0"
+Output: 0
+Explanation: The first version number does not have a third level revision number, 
+which means its third level revision number is default to "0"
+```
+ 
+
+Note:
+
+- Version strings are composed of numeric strings separated by dots . and this numeric strings may have leading zeroes.
+- Version strings do not start or end with dots, and they will not be two consecutive dots.
+
+Solution:
+```cpp
+class Solution {
+public:
+    int compareVersion(string version1, string version2) {
+        
+    }
+};
+```
+
+## 126. Word Ladder II
+
+Given two words (beginWord and endWord), and a dictionary's word list, find all shortest transformation sequence(s) from beginWord to endWord, such that:
+
+- Only one letter can be changed at a time
+- Each transformed word must exist in the word list. Note that beginWord is not a transformed word.
+
+Note:
+
+- Return an empty list if there is no such transformation sequence.
+- All words have the same length.
+- All words contain only lowercase alphabetic characters.
+- You may assume no duplicates in the word list.
+- You may assume beginWord and endWord are non-empty and are not the same.
+
+Example 1:
+```
+Input:
+beginWord = "hit",
+endWord = "cog",
+wordList = ["hot","dot","dog","lot","log","cog"]
+
+Output:
+[
+  ["hit","hot","dot","dog","cog"],
+  ["hit","hot","lot","log","cog"]
+]
+```
+Example 2:
+
+```
+Input:
+beginWord = "hit"
+endWord = "cog"
+wordList = ["hot","dot","dog","lot","log"]
+
+Output: []
+
+Explanation: The endWord "cog" is not in wordList, therefore no 
+possible transformation.
+```
+
+Solution:
+
+```cpp
+class Solution {
+public:
+    vector<vector<string>> findLadders(string beginWord, string endWord, vector<string>& wordList) {
+        
+    }
+};
+```
+
+## 227. Basic Calculator II
+
+Implement a basic calculator to evaluate a simple expression string.
+
+The expression string contains only non-negative integers, +, -, *, / operators and empty spaces . The integer division should truncate toward zero.
+
+Example 1:
+```
+Input: "3+2*2"
+Output: 7
+```
+Example 2:
+
+```
+Input: " 3/2 "
+Output: 1
+```
+Example 3:
+
+```
+Input: " 3+5 / 2 "
+Output: 5
+```
+Note:
+
+- You may assume that the given expression is always valid.
+- Do not use the eval built-in library function.
+
+Solution:
+```cpp
+class Solution {
+public:
+    int calculate(string s) {
+        
+    }
+};
+```
+
+## 767. Reorganize String
+
+Given a string S, check if the letters can be rearranged so that two characters that are adjacent to each other are not the same.
+
+If possible, output any possible result.  If not possible, return the empty string.
+
+Example 1:
+```
+Input: S = "aab"
+Output: "aba"
+```
+Example 2:
+
+```
+Input: S = "aaab"
+Output: ""
+```
+Note:
+
+- S will consist of lowercase letters and have length in range [1, 500].
+
+Solution:
+
+```cpp
+class Solution {
+public:
+    string reorganizeString(string S) {
+        
+    }
+};
+```
+
+## 541. Reverse String II
+
+Given a string and an integer k, you need to reverse the first k characters for every 2k characters counting from the start of the string. If there are less than k characters left, reverse all of them. If there are less than 2k but greater than or equal to k characters, then reverse the first k characters and left the other as original.
+
+Example:
+```
+Input: s = "abcdefg", k = 2
+Output: "bacdfeg"
+```
+Restrictions:
+
+- The string consists of lower English letters only.
+- Length of the given string and k will in the range [1, 10000]
+
+Solution:
+
+```cpp
+class Solution {
+public:
+    string reverseStr(string s, int k) {
+        
+    }
+};
+```
+
+## 564. Find the Closest Palindrome
+
+Given an integer n, find the closest integer (not including itself), which is a palindrome.
+
+The 'closest' is defined as absolute difference minimized between two integers.
+
+Example 1:
+```
+Input: "123"
+Output: "121"
+```
+Note:
+- The input n is a positive integer represented by string, whose length will not exceed 18.
+- If there is a tie, return the smaller one as answer.
+
+Solution:
+```cpp
+class Solution {
+public:
+    string nearestPalindromic(string n) {
+        
+    }
+};
+```
+
+## 383. Ransom Note
+
+Given an arbitrary ransom note string and another string containing letters from all the magazines, write a function that will return true if the ransom note can be constructed from the magazines ; otherwise, it will return false.
+
+Each letter in the magazine string can only be used once in your ransom note.
+
+ 
+
+Example 1:
+```
+Input: ransomNote = "a", magazine = "b"
+Output: false
+```
+Example 2:
+
+```
+Input: ransomNote = "aa", magazine = "ab"
+Output: false
+```
+Example 3:
+```
+
+Input: ransomNote = "aa", magazine = "aab"
+Output: true
+```
+ 
+
+Constraints:
+
+- You may assume that both strings contain only lowercase letters.
+
+Solution:
+
+```cpp
+class Solution {
+public:
+    bool canConstruct(string ransomNote, string magazine) {
+        
+    }
+};
+```
+
+## 539. Minimum Time Difference
+
+Given a list of 24-hour clock time points in "Hour:Minutes" format, find the minimum minutes difference between any two time points in the list.
+
+Example 1:
+```
+Input: ["23:59","00:00"]
+Output: 1
+```
+Note:
+- The number of time points in the given list is at least 2 and won't exceed 20000.
+- The input time is legal and ranges from 00:00 to 23:59.
+
+Solution:
+```cpp
+class Solution {
+public:
+    int findMinDifference(vector<string>& timePoints) {
+        
+    }
+};
+```
