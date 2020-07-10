@@ -132,3 +132,89 @@ public:
     }
 };
 ```
+
+## 698. Partition to K Equal Sum Subsets
+
+Given an array of integers nums and a positive integer k, find whether it's possible to divide this array into k non-empty subsets whose sums are all equal.
+
+ 
+
+Example 1:
+```
+Input: nums = [4, 3, 2, 3, 5, 2, 1], k = 4
+Output: True
+Explanation: It's possible to divide it into 4 subsets 
+(5), (1, 4), (2,3), (2,3) with equal sums.
+```
+
+Note:
+
+- 1 <= k <= len(nums) <= 16.
+- 0 < nums[i] < 10000.
+
+Solution:
+```cpp
+class Solution {
+public:
+    bool canPartitionKSubsets(vector<int>& nums, int k) {
+        
+    }
+};
+```
+
+## 687. Longest Univalue Path
+
+Given a binary tree, find the length of the longest path where each node in the path has the same value. This path may or may not pass through the root.
+
+The length of path between two nodes is represented by the number of edges between them.
+
+ 
+
+Example 1:
+```
+Input:
+
+              5
+             / \
+            4   5
+           / \   \
+          1   1   5
+Output: 2
+```
+ 
+
+Example 2:
+```
+Input:
+
+              1
+             / \
+            4   5
+           / \   \
+          4   4   5
+Output: 2
+```
+ 
+
+Note: The given binary tree has not more than 10000 nodes. The height of the tree is not more than 1000.
+
+Solution:
+```cpp
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
+public:
+    int longestUnivaluePath(TreeNode* root) {
+        
+    }
+};
+```
