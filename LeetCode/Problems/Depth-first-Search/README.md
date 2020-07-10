@@ -3823,3 +3823,562 @@ public:
 };
 ```
 
+
+## 778. Swim in Rising Water
+
+On an N x N grid, each square grid[i][j] represents the elevation at that point (i,j).
+
+Now rain starts to fall. At time t, the depth of the water everywhere is t. You can swim from a square to another 4-directionally adjacent square if and only if the elevation of both squares individually are at most t. You can swim infinite distance in zero time. Of course, you must stay within the boundaries of the grid during your swim.
+
+You start at the top left square (0, 0). What is the least time until you can reach the bottom right square (N-1, N-1)?
+
+Example 1:
+```
+Input: [[0,2],[1,3]]
+Output: 3
+Explanation:
+At time 0, you are in grid location (0, 0).
+You cannot go anywhere else because 4-directionally adjacent neighbors
+have a higher elevation than t = 0.
+
+You cannot reach point (1, 1) until time 3.
+When the depth of water is 3, we can swim anywhere inside the grid.
+```
+Example 2:
+```
+Input: [[0,1,2,3,4],[24,23,22,21,5],[12,13,14,15,16],[11,17,18,19,20],[10,9,8,7,6]]
+Output: 16
+Explanation:
+ 0  1  2  3  4
+24 23 22 21  5
+12 13 14 15 16
+11 17 18 19 20
+10  9  8  7  6
+
+The final route is marked in bold.
+We need to wait until time 16 so that (0, 0) and (4, 4) are connected.
+```
+Note:
+
+- 2 <= N <= 50.
+- grid[i][j] is a permutation of [0, ..., N*N - 1].
+
+Solution:
+```cpp
+class Solution {
+public:
+    int swimInWater(vector<vector<int>>& grid) {
+        
+    }
+};
+```
+
+## 1203. Sort Items by Groups Respecting Dependencies
+
+There are n items each belonging to zero or one of m groups where group[i] is the group that the i-th item belongs to and it's equal to -1 if the i-th item belongs to no group. The items and the groups are zero indexed. A group can have no item belonging to it.
+
+Return a sorted list of the items such that:
+
+- The items that belong to the same group are next to each other in the sorted list.
+- There are some relations between these items where beforeItems[i] is a list containing all the items that should come before the i-th item in the sorted array (to the left of the i-th item).
+Return any solution if there is more than one solution and return an empty list if there is no solution.
+
+ 
+
+Example 1:
+
+![](https://assets.leetcode.com/uploads/2019/09/11/1359_ex1.png)
+
+```
+Input: n = 8, m = 2, group = [-1,-1,1,0,0,1,0,-1], beforeItems = [[],[6],[5],[6],[3,6],[],[],[]]
+Output: [6,3,4,1,5,2,0,7]
+```
+
+Example 2:
+```
+Input: n = 8, m = 2, group = [-1,-1,1,0,0,1,0,-1], beforeItems = [[],[6],[5],[6],[3],[],[4],[]]
+Output: []
+Explanation: This is the same as example 1 except that 4 needs to be before 6 in the sorted list.
+```
+
+Constraints:
+
+- 1 <= m <= n <= 3*10^4
+- group.length == beforeItems.length == n
+- -1 <= group[i] <= m-1
+- 0 <= beforeItems[i].length <= n-1
+- 0 <= beforeItems[i][j] <= n-1
+- i != beforeItems[i][j]
+- beforeItems[i] does not contain duplicates elements.
+
+Solution:
+```cpp
+class Solution {
+public:
+    vector<int> sortItems(int n, int m, vector<int>& group, vector<vector<int>>& beforeItems) {
+        
+    }
+};
+```
+
+
+## 1028. Recover a Tree From Preorder Traversal
+
+We run a preorder depth first search on the root of a binary tree.
+
+At each node in this traversal, we output D dashes (where D is the depth of this node), then we output the value of this node.  (If the depth of a node is D, the depth of its immediate child is D+1.  The depth of the root node is 0.)
+
+If a node has only one child, that child is guaranteed to be the left child.
+
+Given the output S of this traversal, recover the tree and return its root.
+
+ 
+
+Example 1:
+
+![](https://assets.leetcode.com/uploads/2019/04/08/recover-a-tree-from-preorder-traversal.png)
+```
+Input: "1-2--3--4-5--6--7"
+Output: [1,2,5,3,4,6,7]
+```
+Example 2:
+
+![](https://assets.leetcode.com/uploads/2019/04/11/screen-shot-2019-04-10-at-114101-pm.png)
+```
+Input: "1-2--3---4-5--6---7"
+Output: [1,2,5,3,null,6,null,4,null,7]
+```
+
+Example 3:
+
+![](https://assets.leetcode.com/uploads/2019/04/11/screen-shot-2019-04-10-at-114955-pm.png)
+```
+Input: "1-401--349---90--88"
+Output: [1,401,null,349,88,90]
+ ```
+
+Note:
+
+- The number of nodes in the original tree is between 1 and 1000.
+- Each node will have a value between 1 and 10^9.
+ 
+ Solution:
+ ```cpp
+ /**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
+public:
+    TreeNode* recoverFromPreorder(string S) {
+        
+    }
+};
+ ```
+ 
+## 1123. Lowest Common Ancestor of Deepest Leaves
+
+Given a rooted binary tree, return the lowest common ancestor of its deepest leaves.
+
+Recall that:
+
+- The node of a binary tree is a leaf if and only if it has no children
+- The depth of the root of the tree is 0, and if the depth of a node is d, the depth of each of its children is d+1.
+- The lowest common ancestor of a set S of nodes is the node A with the largest depth such that every node in S is in the subtree with root A.
+ 
+
+Example 1:
+```
+Input: root = [1,2,3]
+Output: [1,2,3]
+Explanation: 
+The deepest leaves are the nodes with values 2 and 3.
+The lowest common ancestor of these leaves is the node with value 1.
+The answer returned is a TreeNode object (not an array) with serialization "[1,2,3]".
+```
+Example 2:
+```
+Input: root = [1,2,3,4]
+Output: [4]
+```
+Example 3:
+```
+Input: root = [1,2,3,4,5]
+Output: [2,4,5]
+``` 
+
+Constraints:
+
+- The given tree will have between 1 and 1000 nodes.
+- Each node of the tree will have a distinct value between 1 and 1000.
+
+Solution:
+```cpp
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
+public:
+    TreeNode* lcaDeepestLeaves(TreeNode* root) {
+        
+    }
+};
+```
+
+## 694. Number of Distinct Islands
+
+Given a non-empty 2D array grid of 0's and 1's, an island is a group of 1's (representing land) connected 4-directionally (horizontal or vertical.) You may assume all four edges of the grid are surrounded by water.
+
+Count the number of distinct islands. An island is considered to be the same as another if and only if one island can be translated (and not rotated or reflected) to equal the other.
+
+Example 1:
+```
+11000
+11000
+00011
+00011
+```
+Given the above grid map, return 1.
+
+Example 2:
+```
+11011
+10000
+00001
+11011
+```
+Given the above grid map, return 3.
+
+Notice that:
+```
+11
+1
+```
+and
+```
+ 1
+11
+```
+are considered different island shapes, because we do not consider reflection / rotation.
+
+Note: The length of each dimension in the given grid does not exceed 50.
+
+Solution:
+```cpp
+class Solution {
+public:
+    int numDistinctIslands(vector<vector<int>>& grid) {
+        
+    }
+};
+```
+
+## 1302. Deepest Leaves Sum
+
+Given a binary tree, return the sum of values of its deepest leaves.
+ 
+
+Example 1:
+
+![](https://assets.leetcode.com/uploads/2019/07/31/1483_ex1.png)
+```
+Input: root = [1,2,3,4,5,null,6,7,null,null,null,null,8]
+Output: 15
+ ```
+
+Constraints:
+
+- The number of nodes in the tree is between 1 and 10^4.
+- The value of nodes is between 1 and 100.
+
+Solution:
+```cpp
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
+public:
+    int deepestLeavesSum(TreeNode* root) {
+        
+    }
+};
+```
+
+## 756. Pyramid Transition Matrix
+
+We are stacking blocks to form a pyramid. Each block has a color which is a one letter string.
+
+We are allowed to place any color block C on top of two adjacent blocks of colors A and B, if and only if ABC is an allowed triple.
+
+We start with a bottom row of bottom, represented as a single string. We also start with a list of allowed triples allowed. Each allowed triple is represented as a string of length 3.
+
+Return true if we can build the pyramid all the way to the top, otherwise false.
+
+Example 1:
+```
+Input: bottom = "BCD", allowed = ["BCG", "CDE", "GEA", "FFF"]
+Output: true
+Explanation:
+We can stack the pyramid like this:
+    A
+   / \
+  G   E
+ / \ / \
+B   C   D
+
+We are allowed to place G on top of B and C because BCG is an allowed triple.  
+Similarly, we can place E on top of C and D, then A on top of G and E.
+ ```
+
+Example 2:
+```
+Input: bottom = "AABA", allowed = ["AAA", "AAB", "ABA", "ABB", "BAC"]
+Output: false
+Explanation:
+We can't stack the pyramid to the top.
+Note that there could be allowed triples (A, B, C) and (A, B, D) with C != D.
+ ```
+
+Constraints:
+
+- bottom will be a string with length in range [2, 8].
+- allowed will have length in range [0, 200].
+- Letters in all strings will be chosen from the set {'A', 'B', 'C', 'D', 'E', 'F', 'G'}.
+
+Solution:
+```cpp
+class Solution {
+public:
+    bool pyramidTransition(string bottom, vector<string>& allowed) {
+        
+    }
+};
+```
+
+## 490. The Maze
+
+There is a ball in a maze with empty spaces and walls. The ball can go through empty spaces by rolling up, down, left or right, but it won't stop rolling until hitting a wall. When the ball stops, it could choose the next direction.
+
+Given the ball's start position, the destination and the maze, determine whether the ball could stop at the destination.
+
+The maze is represented by a binary 2D array. 1 means the wall and 0 means the empty space. You may assume that the borders of the maze are all walls. The start and destination coordinates are represented by row and column indexes.
+
+ 
+
+Example 1:
+```
+Input 1: a maze represented by a 2D array
+
+0 0 1 0 0
+0 0 0 0 0
+0 0 0 1 0
+1 1 0 1 1
+0 0 0 0 0
+
+Input 2: start coordinate (rowStart, colStart) = (0, 4)
+Input 3: destination coordinate (rowDest, colDest) = (4, 4)
+
+Output: true
+
+Explanation: One possible way is : left -> down -> left -> down -> right -> down -> right.
+```
+![](https://assets.leetcode.com/uploads/2018/10/12/maze_1_example_1.png)
+
+Example 2:
+```
+Input 1: a maze represented by a 2D array
+
+0 0 1 0 0
+0 0 0 0 0
+0 0 0 1 0
+1 1 0 1 1
+0 0 0 0 0
+
+Input 2: start coordinate (rowStart, colStart) = (0, 4)
+Input 3: destination coordinate (rowDest, colDest) = (3, 2)
+
+Output: false
+
+Explanation: There is no way for the ball to stop at the destination.
+```
+![](https://assets.leetcode.com/uploads/2018/10/13/maze_1_example_2.png)
+ 
+
+Note:
+
+- There is only one ball and one destination in the maze.
+- Both the ball and the destination exist on an empty space, and they will not be at the same position initially.
+- The given maze does not contain border (like the red rectangle in the example pictures), but you could assume the border of the maze are all walls.
+- The maze contains at least 2 empty spaces, and both the width and height of the maze won't exceed 100.
+
+Solution:
+```cpp
+class Solution {
+public:
+    bool hasPath(vector<vector<int>>& maze, vector<int>& start, vector<int>& destination) {
+        
+    }
+};
+```
+
+## 685. Redundant Connection II
+
+In this problem, a rooted tree is a directed graph such that, there is exactly one node (the root) for which all other nodes are descendants of this node, plus every node has exactly one parent, except for the root node which has no parents.
+
+The given input is a directed graph that started as a rooted tree with N nodes (with distinct values 1, 2, ..., N), with one additional directed edge added. The added edge has two different vertices chosen from 1 to N, and was not an edge that already existed.
+
+The resulting graph is given as a 2D-array of edges. Each element of edges is a pair [u, v] that represents a directed edge connecting nodes u and v, where u is a parent of child v.
+
+Return an edge that can be removed so that the resulting graph is a rooted tree of N nodes. If there are multiple answers, return the answer that occurs last in the given 2D-array.
+
+Example 1:
+```
+Input: [[1,2], [1,3], [2,3]]
+Output: [2,3]
+Explanation: The given directed graph will be like this:
+  1
+ / \
+v   v
+2-->3
+```
+Example 2:
+```
+Input: [[1,2], [2,3], [3,4], [4,1], [1,5]]
+Output: [4,1]
+Explanation: The given directed graph will be like this:
+5 <- 1 -> 2
+     ^    |
+     |    v
+     4 <- 3
+```     
+Note:
+- The size of the input 2D-array will be between 3 and 1000.
+- Every integer represented in the 2D-array will be between 1 and N, where N is the size of the input array.
+
+Solution:
+```cpp
+class Solution {
+public:
+    vector<int> findRedundantDirectedConnection(vector<vector<int>>& edges) {
+        
+    }
+};
+```
+
+## 928. Minimize Malware Spread II
+
+(This problem is the same as Minimize Malware Spread, with the differences bolded.)
+
+In a network of nodes, each node i is directly connected to another node j if and only if graph[i][j] = 1.
+
+Some nodes initial are initially infected by malware.  Whenever two nodes are directly connected and at least one of those two nodes is infected by malware, both nodes will be infected by malware.  This spread of malware will continue until no more nodes can be infected in this manner.
+
+Suppose M(initial) is the final number of nodes infected with malware in the entire network, after the spread of malware stops.
+
+We will remove one node from the initial list, completely removing it and any connections from this node to any other node.  Return the node that if removed, would minimize M(initial).  If multiple nodes could be removed to minimize M(initial), return such a node with the smallest index.
+
+ 
+
+Example 1:
+```
+Input: graph = [[1,1,0],[1,1,0],[0,0,1]], initial = [0,1]
+Output: 0
+```
+Example 2:
+
+```
+Input: graph = [[1,1,0],[1,1,1],[0,1,1]], initial = [0,1]
+Output: 1
+```
+Example 3:
+
+```
+Input: graph = [[1,1,0,0],[1,1,1,0],[0,1,1,1],[0,0,1,1]], initial = [0,1]
+Output: 1
+```
+ 
+
+Note:
+
+- 1 < graph.length = graph[0].length <= 300
+- 0 <= graph[i][j] == graph[j][i] <= 1
+- graph[i][i] = 1
+- 1 <= initial.length < graph.length
+- 0 <= initial[i] < graph.length
+
+Solution:
+```cpp
+class Solution {
+public:
+    int minMalwareSpread(vector<vector<int>>& graph, vector<int>& initial) {
+        
+    }
+};
+```
+
+## 841. Keys and Rooms
+
+There are N rooms and you start in room 0.  Each room has a distinct number in 0, 1, 2, ..., N-1, and each room may have some keys to access the next room. 
+
+Formally, each room i has a list of keys rooms[i], and each key rooms[i][j] is an integer in [0, 1, ..., N-1] where N = rooms.length.  A key rooms[i][j] = v opens the room with number v.
+
+Initially, all the rooms start locked (except for room 0). 
+
+You can walk back and forth between rooms freely.
+
+Return true if and only if you can enter every room.
+
+Example 1:
+```
+Input: [[1],[2],[3],[]]
+Output: true
+Explanation:  
+We start in room 0, and pick up key 1.
+We then go to room 1, and pick up key 2.
+We then go to room 2, and pick up key 3.
+We then go to room 3.  Since we were able to go to every room, we return true.
+```
+Example 2:
+```
+Input: [[1,3],[3,0,1],[2],[0]]
+Output: false
+Explanation: We can't enter the room with number 2.
+```
+Note:
+
+- 1 <= rooms.length <= 1000
+- 0 <= rooms[i].length <= 1000
+- The number of keys in all rooms combined is at most 3000.
+
+Solution:
+```cpp
+class Solution {
+public:
+    bool canVisitAllRooms(vector<vector<int>>& rooms) {
+        
+    }
+};
+```
