@@ -218,3 +218,206 @@ public:
     }
 };
 ```
+
+## 726. Number of Atoms
+
+Given a chemical formula (given as a string), return the count of each atom.
+
+An atomic element always starts with an uppercase character, then zero or more lowercase letters, representing the name.
+
+1 or more digits representing the count of that element may follow if the count is greater than 1. If the count is 1, no digits will follow. For example, H2O and H2O2 are possible, but H1O2 is impossible.
+
+Two formulas concatenated together produce another formula. For example, H2O2He3Mg4 is also a formula.
+
+A formula placed in parentheses, and a count (optionally added) is also a formula. For example, (H2O2) and (H2O2)3 are formulas.
+
+Given a formula, output the count of all elements as a string in the following form: the first name (in sorted order), followed by its count (if that count is more than 1), followed by the second name (in sorted order), followed by its count (if that count is more than 1), and so on.
+
+Example 1:
+```
+Input: 
+formula = "H2O"
+Output: "H2O"
+Explanation: 
+The count of elements are {'H': 2, 'O': 1}.
+```
+Example 2:
+```
+Input: 
+formula = "Mg(OH)2"
+Output: "H2MgO2"
+Explanation: 
+The count of elements are {'H': 2, 'Mg': 1, 'O': 2}.
+```
+Example 3:
+```
+Input: 
+formula = "K4(ON(SO3)2)2"
+Output: "K4N2O14S4"
+Explanation: 
+The count of elements are {'K': 4, 'N': 2, 'O': 14, 'S': 4}.
+```
+Note:
+
+- All atom names consist of lowercase letters, except for the first character which is uppercase.
+- The length of formula will be in the range [1, 1000].
+- formula will only consist of letters, digits, and round parentheses, and is a valid formula as defined in the problem.
+
+Solution:
+
+```cpp
+class Solution {
+public:
+    string countOfAtoms(string formula) {
+        
+    }
+};
+```
+
+## 247. Strobogrammatic Number II
+
+A strobogrammatic number is a number that looks the same when rotated 180 degrees (looked at upside down).
+
+Find all strobogrammatic numbers that are of length = n.
+
+Example:
+```
+Input:  n = 2
+Output: ["11","69","88","96"]
+```
+
+Solution:
+```cpp
+class Solution {
+public:
+    vector<string> findStrobogrammatic(int n) {
+        
+    }
+};
+```
+
+## 783. Minimum Distance Between BST Nodes
+
+Given a Binary Search Tree (BST) with the root node root, return the minimum difference between the values of any two different nodes in the tree.
+
+Example :
+```
+Input: root = [4,2,6,1,3,null,null]
+Output: 1
+Explanation:
+Note that root is a TreeNode object, not an array.
+
+The given tree [4,2,6,1,3,null,null] is represented by the following diagram:
+
+          4
+        /   \
+      2      6
+     / \    
+    1   3  
+
+while the minimum difference in this tree is 1, it occurs between node 1 and node 2, 
+also between node 3 and node 2.
+```
+Note:
+
+- The size of the BST will be between 2 and 100.
+- The BST is always valid, each node's value is an integer, and each node's value is different.
+- This question is the same as 530: https://leetcode.com/problems/minimum-absolute-difference-in-bst/
+
+Solution:
+```cpp
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
+public:
+    int minDiffInBST(TreeNode* root) {
+        
+    }
+};
+```
+
+## 248. Strobogrammatic Number III
+
+A strobogrammatic number is a number that looks the same when rotated 180 degrees (looked at upside down).
+
+Write a function to count the total strobogrammatic numbers that exist in the range of low <= num <= high.
+
+Example:
+```
+Input: low = "50", high = "100"
+Output: 3 
+Explanation: 69, 88, and 96 are three strobogrammatic numbers.
+```
+Note:
+Because the range might be a large number, the low and high numbers are represented as string.
+
+Solution:
+```cpp
+class Solution {
+public:
+    int strobogrammaticInRange(string low, string high) {
+        
+    }
+};
+```
+
+## 794. Valid Tic-Tac-Toe State
+
+A Tic-Tac-Toe board is given as a string array board. Return True if and only if it is possible to reach this board position during the course of a valid tic-tac-toe game.
+
+The board is a 3 x 3 array, and consists of characters " ", "X", and "O".  The " " character represents an empty square.
+
+Here are the rules of Tic-Tac-Toe:
+
+- Players take turns placing characters into empty squares (" ").
+- The first player always places "X" characters, while the second player always places "O" characters.
+- "X" and "O" characters are always placed into empty squares, never filled ones.
+- The game ends when there are 3 of the same (non-empty) character filling any row, column, or diagonal.
+- The game also ends if all squares are non-empty.
+- No more moves can be played if the game is over.
+
+Example 1:
+```
+Input: board = ["O  ", "   ", "   "]
+Output: false
+Explanation: The first player always plays "X".
+```
+Example 2:
+```
+Input: board = ["XOX", " X ", "   "]
+Output: false
+Explanation: Players take turns making moves.
+```
+Example 3:
+```
+Input: board = ["XXX", "   ", "OOO"]
+Output: false
+```
+Example 4:
+```
+Input: board = ["XOX", "O O", "XOX"]
+Output: true
+```
+Note:
+
+- board is a length-3 array of strings, where each string board[i] has length 3.
+- Each board[i][j] is a character in the set {" ", "X", "O"}.
+
+Solution:
+```cpp
+class Solution {
+public:
+    bool validTicTacToe(vector<string>& board) {
+        
+    }
+};
+```
